@@ -72,7 +72,7 @@
                 <div class="col-md-2">
                     <div class="float-start d-block" style="margin-top:25px !important;">
                         <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
-                        <RadzenButton Text="Reset" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Primary" Variant="Variant.Outlined" Shade="Shade.Lighter" />
+                        <RadzenButton Text="Reset" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
                     </div>
                 </div>
             </div>
@@ -96,8 +96,8 @@
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="PetBloodChemistryTypes" Property="PetBloodChemsTypeID" Title="Action" Sortable="false" Filterable="false">
                     <Template Context="item">
-                        <RadzenButton ButtonStyle="ButtonStyle.Warning" Variant="Variant.Flat" Shade="Shade.Lighter" Text="Edit" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.PetBloodChemsTypeID)) />
-                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Text="Delete" Icon="delete" Click=@(agrds => OnDelete(item.PetBloodChemsTypeID)) />
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.PetBloodChemsTypeID)) />
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium"  Icon="delete" Click=@(agrds => OnDelete(item.PetBloodChemsTypeID)) />
                     </Template>
                 </RadzenDataGridColumn>
             </Columns>

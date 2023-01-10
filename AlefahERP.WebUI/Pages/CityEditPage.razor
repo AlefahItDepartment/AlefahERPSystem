@@ -1,0 +1,159 @@
+﻿@page "/city/{CityID}"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@inject DialogService dialogService
+
+@inject IUnitOfWork unitofWork
+
+<div class="p-3">
+    <div class="row mb-3">
+        <div class="col-lg-12">
+            <RadzenAlert Visible=@showSuccessMessage AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter">
+                @message
+            </RadzenAlert>
+            <RadzenAlert Visible=@showErrorMessage AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter">
+                @message
+            </RadzenAlert>
+        </div>
+    </div>
+
+
+    <RadzenTemplateForm TItem="City" Data="@model" Submit="OnUpdate">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group mb-1">
+                    <RadzenText>Country <span class="text-danger">*</span></RadzenText>
+                    <div class="input-group">
+                        <RadzenDropDown @bind-Value="@model.CountryID" TextProperty="CountryName" ValueProperty="CountryID" Data="@countries" class="w-100" Change=@(args => OnRegionList(args))>
+
+                        </RadzenDropDown>
+                    </div>
+                    <RadzenRequiredValidator Component="CountryID" Text="Country field is required." Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group">
+                    <RadzenText>Region <span class="text-danger">*</span></RadzenText>
+                    <div class="input-group">
+                        <RadzenDropDown @bind-Value="@model.RegionID" TextProperty="RegionName" ValueProperty="RegionID" Data="@regions" class="w-100">
+
+                        </RadzenDropDown>
+                    </div>
+                    <RadzenRequiredValidator Component="RegionID" Text="Region field is required." Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>City Name</RadzenText>
+                    <div class="input-group">
+                        <RadzenTextBox Name="CityName" @bind-Value=@model.CityName class="w-100" />
+                    </div>
+                    <RadzenLengthValidator Component="CityName" Min="3" Text="City name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                    <RadzenLengthValidator Component="CityName" Max="50" Text="City name should be at most 50 characters" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>City Code</RadzenText>
+                    <div class="input-group">
+                        <RadzenTextBox Name="CityCode" @bind-Value=@model.CityCode class="w-100" />
+                    </div>
+                    <RadzenLengthValidator Component="CityCode" Min="3" Text="City code should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                    <RadzenLengthValidator Component="CityCode" Max="150" Text="City code should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenButton Text="Update" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled="@IsBusy" BusyText="Update..." Click=@((args) => OnUpdate()) />
+                    <RadzenButton Text="Cancel" ButtonType="ButtonType.Button" Disabled="@IsBusy" ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" Click="@((args)=> dialogService.CloseSide(false))" />
+                </div>
+            </div>
+        </div>
+    </RadzenTemplateForm>
+</div>
+
+
+@code {
+    bool popup = true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+    string message;
+    List<Country> countries = new List<Country>();
+    List<Region> regions = new List<Region>();
+
+    [Parameter]
+    public int CityID { get; set; }
+
+    City model;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        var results = await this.unitofWork.Setup.City.Get(CityID);
+        if (results.status)
+            model = results.data;
+
+        GetCountryList();
+        if (model != null)
+            OnRegionList(model.CountryID);
+    }
+    void GetCountryList()
+    {
+        countries = this.unitofWork.Setup.Country.GetAll().ToList();
+
+    }
+    void OnRegionList(object value, string? name = "")
+    {
+        regions = this.unitofWork.Setup.Region.GetAll(x => x.CountryID == (int)value).ToList();
+
+    }
+
+    async Task OnUpdate()
+    {
+        IsBusy = true;
+
+        try
+        {
+            await Task.Yield();
+
+            model.CityID = CityID;
+
+            var result = await this.unitofWork.Setup.City.Update(model);
+
+            if (result != null)
+            {
+                if (result.status)
+                {
+                    message = result.message;
+                    showSuccessMessage = true;
+                    showErrorMessage = false;
+
+                    Task.Delay(500);
+                    dialogService.CloseSide(model);
+                }
+                else
+                {
+                    message = "An error occured.";
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                }
+            }
+            else
+            {
+                message = "An error occured.";
+                showSuccessMessage = false;
+                showErrorMessage = true;
+            }
+
+        }
+        catch (Exception ex)
+        {
+            message = ex.Message;
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            throw ex;
+        }
+        finally
+        {
+
+            IsBusy = false;
+            showSuccessMessage = false;
+            showErrorMessage = false;
+        }
+    }
+
+}

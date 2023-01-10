@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-group mb-1">
                     <RadzenButton Text="Update" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled="@IsBusy" BusyText="Update..." Click=@((args) => OnUpdate()) />
-                    <RadzenButton Text="Cancel" ButtonType="ButtonType.Button" Disabled="@IsBusy" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Outlined" Shade="Shade.Lighter" Click="@((args)=> dialogService.CloseSide(false))" />
+                    <RadzenButton Text="Cancel" ButtonType="ButtonType.Button" Disabled="@IsBusy" ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" Click="@((args)=> dialogService.CloseSide(false))" />
                 </div>
             </div>
         </div>
