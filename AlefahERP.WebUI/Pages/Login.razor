@@ -1,0 +1,60 @@
+﻿@page "/"
+@layout LoginLayout
+@using AlefahERP.DTO;
+@using AlefahERP.WebUI.Data
+@inject CustomAuthService auth
+@inject NavigationManager Navigation
+
+<div class="container-fluid">
+    <div class="row align-content-center vh-100">
+
+        <div class="col-lg-4 offset-lg-4 d-flex mx-auto">
+            <RadzenCard class="d-flex m-5 p-0 rz-border-radius-4 rz-shadow-10" Style="width: 100%; flex-direction: column; overflow: hidden; align-items: stretch;">
+                <RadzenCard Class="rz-shadow-0 rz-border-radius-0 rz-background-color-info p-5" style="text-align: center;">
+                    <RadzenText TextStyle="TextStyle.DisplayH3" TagName="TagName.H2" Class="rz-color-white mb-0">Login</RadzenText>
+                </RadzenCard>
+                <RadzenCard Class="rz-shadow-0 p-5">
+                    <RadzenTemplateForm TItem="Users" Action="/Login" Method="Post">
+                        <RadzenLogin></RadzenLogin>
+                    </RadzenTemplateForm>
+                </RadzenCard>
+            </RadzenCard>
+        </div>
+    </div>
+</div>
+
+
+@*<EventConsole @ref=@console class="mt-4" />*@
+
+
+@code {
+
+    bool rememberMe = true;
+
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+    }
+
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        //base.OnAfterRender(firstRender);
+        //if (auth.Users.Count > 0)
+        //    Navigation.NavigateTo("Index", true);
+
+    }
+    void OnRegister(string name)
+    {
+
+    }
+
+    void OnResetPassword(string value, string name)
+    {
+
+    }
+}
+

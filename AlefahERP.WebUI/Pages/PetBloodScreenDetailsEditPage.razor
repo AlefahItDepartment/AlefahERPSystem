@@ -1,0 +1,157 @@
+﻿@page "/petbloodscreendetails/{PetBloodScreenDetailID}"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@inject DialogService dialogService
+
+@inject IUnitOfWork unitofWork
+
+<div class="p-3">
+
+    <div class="row mb-3">
+        <div class="col-lg-12">
+            <RadzenAlert Visible=@showSuccessMessage AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter">
+                @message
+            </RadzenAlert>
+            <RadzenAlert Visible=@showErrorMessage AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter">
+                @message
+            </RadzenAlert>
+        </div>
+    </div>
+
+    <RadzenTemplateForm TItem="PetBloodScreenDetails" Data="@model" Submit="OnUpdate">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group mb-1">
+                    <RadzenText>Sub Species <span class="text-danger">*</span></RadzenText>
+                    <div class="input-group">
+                        <RadzenDropDown Name="PetSubSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSubSpeciesID TextProperty="PetSubSpeciesNameEN" ValueProperty="PetSubSpeciesID" Data=@petSubSpeciesList class="w-100" />
+                    </div>
+                    <RadzenRequiredValidator Component="PetSubSpeciesID" Text="Pet sub species is required" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>Blood Screen Type <span class="text-danger">*</span></RadzenText>
+                    <div class="input-group">
+                        <RadzenDropDown Name="PetBloodScreenTypeID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetBloodScreenTypeID TextProperty="PetBloodScreenTypeNameEN" ValueProperty="PetBloodScreenTypeID" Data=@petBloodScreenTypesList class="w-100" />
+                    </div>
+                    <RadzenRequiredValidator Component="PetBloodScreenTypeID" Text="Pet blood screen type is required" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>Low <span class="text-danger">*</span></RadzenText>
+                    <div class="input-group">
+                        <RadzenNumeric class="w-100" Name="Low" @bind-Value="@model.Low" />
+                    </div>
+                    <RadzenRequiredValidator Component="Low" Min="0" Text="Low field is required" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>High <span class="text-danger">*</span></RadzenText>
+                    <div class="input-group">
+                        <RadzenNumeric class="w-100" Name="High" @bind-Value="@model.High" />
+                    </div>
+                    <RadzenRequiredValidator Component="High" Min="0" Text="High field is required" Popup=@popup Style="position:absolute" />
+                </div>             
+                <div class="form-group mb-1">
+                    <RadzenButton Text="Update" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled="@IsBusy" BusyText="Update..." Click=@((args) => OnUpdate()) />
+                    <RadzenButton Text="Cancel" ButtonType="ButtonType.Button" Disabled="@IsBusy" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Outlined" Shade="Shade.Lighter" Click="@((args)=> dialogService.CloseSide(false))" />
+                </div>
+            </div>
+        </div>
+    </RadzenTemplateForm>
+</div>
+
+
+@code {
+    bool popup = true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+    string message;
+    List<PetSpecies> petSpeciesList = new List<PetSpecies>();
+    List<PetSubSpecies> petSubSpeciesList = new List<PetSubSpecies>();
+    List<PetBloodScreenTypes> petBloodScreenTypesList = new List<PetBloodScreenTypes>();
+
+
+    [Parameter]
+    public int PetBloodScreenDetailID { get; set; }
+
+    PetBloodScreenDetails model;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        var results = await this.unitofWork.PetCare.PetBloodScreenDetails.Get(PetBloodScreenDetailID);
+        if (results.status)
+            model = results.data;
+        await GetPetSubSpecies();
+        await GetPetBloodScreenTypes();
+    }
+
+
+    async Task GetPetSubSpecies()
+    {
+
+
+        petSubSpeciesList = this.unitofWork.PetCare.PetSubSpecies.GetAll().ToList();
+    }
+
+    async Task GetPetBloodScreenTypes()
+    {
+
+        petBloodScreenTypesList = this.unitofWork.PetCare.PetBloodScreenTypes.GetAll().ToList();
+    }
+
+    async Task OnUpdate()
+    {
+        IsBusy = true;
+
+        try
+        {
+            await Task.Yield();
+
+            model.PetBloodScreenDetailID = PetBloodScreenDetailID;
+
+            var result = await this.unitofWork.PetCare.PetBloodScreenDetails.Update(model);
+
+            if (result != null)
+            {
+                if (result.status)
+                {
+                    message = result.message;
+                    showSuccessMessage = true;
+                    showErrorMessage = false;
+
+                    Task.Delay(500);
+                    dialogService.CloseSide(model);
+                }
+                else
+                {
+                    message = "An error occured.";
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                }
+            }
+            else
+            {
+                message = "An error occured.";
+                showSuccessMessage = false;
+                showErrorMessage = true;
+            }
+
+        }
+        catch (Exception ex)
+        {
+            message = ex.Message;
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            throw ex;
+        }
+        finally
+        {
+
+            IsBusy = false;
+            showSuccessMessage = false;
+            showErrorMessage = false;
+        }
+    }
+
+}

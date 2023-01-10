@@ -1,0 +1,12 @@
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\bin\Debug\net7.0\AlefahERP.DTO.deps.json
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\bin\Debug\net7.0\AlefahERP.DTO.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\bin\Debug\net7.0\AlefahERP.DTO.pdb
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\AlefahERP.DTO.csproj.AssemblyReference.cache
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\AlefahERP.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\AlefahERP.DTO.AssemblyInfoInputs.cache
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\AlefahERP.DTO.AssemblyInfo.cs
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\AlefahERP.DTO.csproj.CoreCompileInputs.cache
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\AlefahERP.DTO.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\refint\AlefahERP.DTO.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\AlefahERP.DTO.pdb
+D:\ALEFAH ERP\AlefahERP\AlefahERP.DTO\obj\Debug\net7.0\ref\AlefahERP.DTO.dll

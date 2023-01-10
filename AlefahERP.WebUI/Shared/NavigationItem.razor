@@ -1,0 +1,41 @@
+﻿@using AlefahERP.WebUI.Data
+@if (!Navigation.New && !Navigation.Updated)
+{
+    <RadzenPanelMenuItem @bind-Expanded=@Expanded Text="@Navigation.Name" Path="@Navigation.Path" Icon="@Navigation.Icon">
+        @ChildContent
+    </RadzenPanelMenuItem>
+}
+else
+{
+    <RadzenPanelMenuItem @bind-Expanded=@Expanded Text="@Navigation.Name" Path="@Navigation.Path" Icon="@Navigation.Icon">
+        <Template>
+            @Navigation.Name
+            <RadzenBadge Text="Updated" Visible=@Navigation.Updated BadgeStyle="BadgeStyle.Info" Shade="Shade.Lighter" />
+            <RadzenBadge Text="New" Visible=@Navigation.New BadgeStyle="BadgeStyle.Success" />
+        </Template>
+        <ChildContent>@ChildContent</ChildContent>
+    </RadzenPanelMenuItem>
+}
+@code {
+    [Parameter]
+    public Navigation Navigation { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool Expanded
+    {
+        get
+        {
+            return Navigation.Expanded;
+        }
+        set
+        {
+            Navigation.Expanded = value;
+        }
+    }
+
+    [Parameter]
+    public EventCallback<bool> ExpandedChanged { get; set; }
+}

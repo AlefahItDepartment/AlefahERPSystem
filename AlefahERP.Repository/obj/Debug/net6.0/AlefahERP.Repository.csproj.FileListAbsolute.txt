@@ -1,0 +1,17 @@
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\bin\Debug\net6.0\AlefahERP.Repository.deps.json
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\bin\Debug\net6.0\AlefahERP.Repository.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\bin\Debug\net6.0\AlefahERP.Repository.pdb
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\bin\Debug\net6.0\AlefahERP.DTO.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\bin\Debug\net6.0\AlefahERP.DTO.pdb
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\AlefahERP.Repository.csproj.AssemblyReference.cache
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\AlefahERP.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\AlefahERP.Repository.AssemblyInfoInputs.cache
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\AlefahERP.Repository.AssemblyInfo.cs
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\AlefahERP.Repository.csproj.CoreCompileInputs.cache
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\AlefahERP.Repository.csproj.CopyComplete
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\AlefahERP.Repository.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\refint\AlefahERP.Repository.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\AlefahERP.Repository.pdb
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net6.0\ref\AlefahERP.Repository.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\bin\Debug\net6.0\AlefahERP.Common.dll
+D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\bin\Debug\net6.0\AlefahERP.Common.pdb

@@ -1,0 +1,361 @@
+﻿@page "/petExaminedetails"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@using System.Linq.Dynamic.Core
+@inject IUnitOfWork unitofWork
+@inject DialogService DialogService
+@implements IDisposable
+@attribute [Authorize(Roles = "Admin, Customer")]
+
+<div class="container-fluid">
+
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <RadzenText TextStyle="TextStyle.DisplayH4" TagName="TagName.H4" Text="Pet Examine Details" />
+        </div>
+        <div class="col-lg-6">
+            <div class="d-block justify-content-end">
+                <RadzenBreadCrumb Class="rz-text-align-end">
+                    <Template Context="item">
+                        <RadzenBadge Text="@item.Text" IsPill="true" />
+                    </Template>
+                    <ChildContent>
+                        <RadzenBreadCrumbItem Text="Setup" />
+                        <RadzenBreadCrumbItem Text="Pet Care" />
+                        <RadzenBreadCrumbItem Icon="add" Text="Pet Examine Details" />
+                    </ChildContent>
+                </RadzenBreadCrumb>
+            </div>
+        </div>
+    </div>
+
+    <RadzenCard Class="mb-3">
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+        <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+            @message
+        </RadzenAlert>
+        <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+            @message
+        </RadzenAlert>
+        <RadzenTemplateForm TItem="PetExamineDetails" Data="@model" Submit="OnCreate">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <RadzenText>Sub Species <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenDropDown Name="PetSubSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSubSpeciesID TextProperty="PetSubSpeciesNameEN" ValueProperty="PetSubSpeciesID" Data=@petSubSpeciesList class="w-100" />
+                        </div>
+                        <RadzenRequiredValidator Component="PetSubSpeciesID" Text="Pet sub species is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <RadzenText>Examine Type <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenDropDown Name="PetExamineTypeID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetExamineTypeID TextProperty="PetExamineTypeNameEN" ValueProperty="PetExamineTypeID" Data=@petExamineTypesList class="w-100" />
+                        </div>
+                        <RadzenRequiredValidator Component="PetExamineTypeID" Text="Pet examine type is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <RadzenText>EL <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenNumeric class="w-100" Name="EL" @bind-Value="@model.EL" />
+                        </div>
+                        <RadzenRequiredValidator Component="EL" Min="0" Text="EL field is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <RadzenText>Low <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenNumeric class="w-100" Name="Low" @bind-Value="@model.Low" />
+                        </div>
+                        <RadzenRequiredValidator Component="Low" Min="0" Text="Low field is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <RadzenText>High <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenNumeric class="w-100" Name="High" @bind-Value="@model.High" />
+                        </div>
+                        <RadzenRequiredValidator Component="High" Min="0" Text="High field is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <RadzenText>Panting <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenNumeric class="w-100" Name="Panting" @bind-Value="@model.Panting" />
+                        </div>
+                        <RadzenRequiredValidator Component="Panting" Min="0" Text="Panting field is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="float-start d-block" style="margin-top:25px !important;">
+                        <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                        <RadzenButton Text="Reset" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Primary" Variant="Variant.Outlined" Shade="Shade.Lighter" />
+                    </div>
+                </div>
+            </div>
+        </RadzenTemplateForm>
+    </RadzenCard>
+
+    <RadzenCard class="mb-3">
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Pet Examine Detail</RadzenText>
+        <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@PetExamineDetails" Count="@count" IsLoading="@IsDataGridLoading" TItem="PetExamineDetails" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+            <Columns>
+                <RadzenDataGridColumn TItem="PetExamineDetails" Property="PetSubSpeciesID" Title="Species ID" Frozen="true">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="PetExamineDetails" Property="PetExamineTypeID" Title="Type ID" />
+                <RadzenDataGridColumn TItem="PetExamineDetails" Property="EL" Type=(typeof(double)) Title="EL" />
+                <RadzenDataGridColumn TItem="PetExamineDetails" Property="Low" Type=(typeof(double)) Title="Low" />
+                <RadzenDataGridColumn TItem="PetExamineDetails" Property="High" Type=(typeof(double)) Title="High" />
+                <RadzenDataGridColumn TItem="PetExamineDetails" Property="Panting" Type=(typeof(double)) Title="Low" />
+                <RadzenDataGridColumn TItem="PetExamineDetails" Property="PetExamineDetailID" Title="Action" Sortable="false" Filterable="false">
+                    <Template Context="item">
+                        <RadzenButton ButtonStyle="ButtonStyle.Warning" Variant="Variant.Flat" Shade="Shade.Lighter" Text="Edit" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.PetExamineDetailID)) />
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Text="Delete" Icon="delete" Click=@(agrds => OnDelete(item.PetExamineDetailID)) />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</div>
+
+
+
+
+@code {
+
+    bool checkBox1Value = true;
+    PetExamineDetails model = new PetExamineDetails();
+    List<PetSubSpecies> petSubSpeciesList = new List<PetSubSpecies>();
+    List<PetExamineTypes> petExamineTypesList = new List<PetExamineTypes>();
+    List<PetExamineDetails> PetExamineDetails = new List<PetExamineDetails>();
+
+    RadzenDataGrid<PetExamineDetails>? grid;
+    bool IsDataGridLoading = false;
+    int count = 0;
+    string? message;
+    bool popup = true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        DialogService.OnOpen += Open;
+        DialogService.OnClose += Close;
+
+        await PreGridLoadData();
+        await GetPetSubSpecies();
+        await GetPetExamineTypes();
+    }
+    public void Dispose()
+    {
+        DialogService.OnOpen -= Open;
+        DialogService.OnClose -= Close;
+    }
+
+    async Task GridLoadData(LoadDataArgs args)
+    {
+
+        await PreGridLoadData(args);
+    }
+
+    async Task PreGridLoadData(LoadDataArgs? args = null)
+    {
+
+        IsDataGridLoading = true;
+
+
+        await Task.Yield();
+
+        IQueryable<PetExamineDetails> query = this.unitofWork.PetCare.PetExamineDetails.GetAll();
+
+        if (args != null)
+        {
+            if (!string.IsNullOrEmpty(args.Filter))
+            {
+
+                query = query.Where(args.Filter);
+            }
+
+            if (!string.IsNullOrEmpty(args.OrderBy))
+            {
+                query = query.OrderBy(args.OrderBy);
+            }
+            else
+            {
+                query = query.OrderByDescending(o => o.PetExamineDetailID);
+            }
+        }
+        else
+        {
+
+            query = query.OrderByDescending(o => o.PetExamineDetailID);
+        }
+
+        count = query.Count();
+
+        if (args == null)
+        {
+            query = query.Skip(0).Take(5);
+        }
+        else
+        {
+            query = query.Skip(args.Skip.Value).Take(args.Top.Value);
+        }
+
+        PetExamineDetails = query.ToList();
+
+        IsDataGridLoading = false;
+    }
+
+    async Task OnCreate()
+    {
+        try
+        {
+            await Task.Yield();
+
+            IsBusy = true;
+            if (model != null)
+            {
+                var results = await this.unitofWork.PetCare.PetExamineDetails.Add(model);
+
+                if (results != null)
+                {
+                    if (results.status)
+                    {
+                        showSuccessMessage = true;
+                        showErrorMessage = false;
+
+                        message = results.message;
+
+                        model = new PetExamineDetails();
+
+                        if (grid != null)
+                            await grid.Reload();
+                    }
+                    else
+                    {
+                        showSuccessMessage = false;
+                        showErrorMessage = true;
+                        message = results.message;
+                    }
+
+
+                }
+                else
+                {
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                    message = "An error occured";
+                }
+            }
+            else
+            {
+                showSuccessMessage = false;
+                showErrorMessage = true;
+                message = "An error occured";
+            }
+        }
+        catch (Exception ex)
+        {
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            message = ex.Message;
+            throw ex;
+
+        }
+        finally
+        {
+            showSuccessMessage = false;
+            showErrorMessage = false;
+            IsBusy = false;
+        }
+    }
+
+
+    async Task OnDelete(int PetExamineDetailsID)
+    {
+        try
+        {
+
+            var confirm = await DialogService.Confirm("Are you sure!, You want to delete this record.", "Confirm", new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" });
+
+            if (confirm.HasValue)
+            {
+
+                if (confirm.Value)
+                {
+
+                    var result = await this.unitofWork.PetCare.PetExamineDetails.Delete(PetExamineDetailsID);
+                    if (result != null)
+                    {
+                        if (result.status)
+                        {
+                            model = new PetExamineDetails();
+
+                            if (grid != null)
+                                await grid.Reload();
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+        finally
+        {
+
+        }
+    }
+
+
+    async Task OnOpenDialog(int PetExamineDetailID)
+    {
+
+        await DialogService.OpenSideAsync<PetExamineDetailsEditPage>($"Edit Pet Examine Details",
+               new Dictionary<string, object>() { { "PetExamineDetailID", PetExamineDetailID } },
+               new SideDialogOptions() { Position = DialogPosition.Right });
+
+
+    }
+
+    void Open(string title, Type type, Dictionary<string, object> parameters, DialogOptions options)
+    {
+        //console.Log("Dialog opened");
+    }
+
+    void Close(dynamic result)
+    {
+
+    }
+
+
+
+    async Task GetPetSubSpecies()
+    {
+
+
+        petSubSpeciesList = this.unitofWork.PetCare.PetSubSpecies.GetAll().ToList();
+    }
+
+    async Task GetPetExamineTypes()
+    {
+
+        petExamineTypesList = this.unitofWork.PetCare.PetExamineTypes.GetAll().ToList();
+    }
+
+}

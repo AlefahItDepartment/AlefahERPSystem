@@ -1,0 +1,131 @@
+﻿@page "/designation/{DesignationID}"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@inject DialogService dialogService
+
+@inject IUnitOfWork unitofWork
+
+<div class="p-3">
+    <div class="row mb-3">
+        <div class="col-lg-12">
+            <RadzenAlert Visible=@showSuccessMessage AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter">
+                @message
+            </RadzenAlert>
+            <RadzenAlert Visible=@showErrorMessage AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter">
+                @message
+            </RadzenAlert>
+        </div>
+    </div>
+
+
+    <RadzenTemplateForm TItem="Designation" Data="@model" Submit="OnUpdate">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group mb-1">
+                    <RadzenText>Name (English)</RadzenText>
+                    <div class="input-group">
+                        <RadzenTextBox Name="DesignationNameEN" @bind-Value=@model.DesignationNameEN class="w-100" />
+                    </div>
+                    <RadzenLengthValidator Component="DesignationNameEN" Min="3" Text="Designation name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                    <RadzenLengthValidator Component="DesignationNameEN" Max="50" Text="Designation name should be at most 50 characters" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>Name (Arabic)</RadzenText>
+                    <div class="input-group">
+                        <RadzenTextBox Name="DesignationNameAR" @bind-Value=@model.DesignationNameAR class="w-100" />
+                    </div>
+                    <RadzenLengthValidator Component="DesignationNameAR" Min="3" Text="Designation name should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                    <RadzenLengthValidator Component="DesignationNameAR" Max="150" Text="Designation name should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                </div>               
+                <div class="form-group mb-3">
+                    <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
+                    <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenButton Text="Update" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled="@IsBusy" BusyText="Update..." Click=@((args) => OnUpdate()) />
+                    <RadzenButton Text="Cancel" ButtonType="ButtonType.Button" Disabled="@IsBusy" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Outlined" Shade="Shade.Lighter" Click="@((args)=> dialogService.CloseSide(false))" />
+                </div>
+            </div>
+        </div>
+    </RadzenTemplateForm>
+</div>
+
+
+@code {
+    bool popup=true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+    string message;
+
+
+    [Parameter]
+    public int DesignationID { get; set; }
+
+    Designation model;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        var results = await this.unitofWork.Setup.Designation.Get(DesignationID);
+        if (results.status)
+            model = results.data;
+    }
+
+
+    async Task OnUpdate()
+    {
+        IsBusy = true;
+
+        try
+        {
+            await Task.Yield();
+
+            model.DesignationID = DesignationID;
+
+            var result = await this.unitofWork.Setup.Designation.Update(model);
+
+            if (result != null)
+            {
+                if (result.status)
+                {
+                    message = result.message;
+                    showSuccessMessage = true;
+                    showErrorMessage = false;
+
+                    Task.Delay(500);
+                    dialogService.CloseSide(model);
+                }
+                else
+                {
+                    message = "An error occured.";
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                }
+            }
+            else
+            {
+                message = "An error occured.";
+                showSuccessMessage = false;
+                showErrorMessage = true;
+            }
+
+        }
+        catch (Exception ex)
+        {
+            message = ex.Message;
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            throw ex;
+        }
+        finally
+        {
+
+            IsBusy = false;
+            showSuccessMessage = false;
+            showErrorMessage = false;
+        }
+    }
+
+}

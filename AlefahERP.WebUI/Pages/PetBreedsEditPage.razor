@@ -1,0 +1,154 @@
+﻿@page "/petbreeds/{PetBreedID}"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@inject DialogService dialogService
+
+@inject IUnitOfWork unitofWork
+
+<div class="p-3">
+    <div class="row mb-3">
+        <div class="col-lg-12">
+            <RadzenAlert Visible=@showSuccessMessage AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter">
+                @message
+            </RadzenAlert>
+            <RadzenAlert Visible=@showErrorMessage AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter">
+                @message
+            </RadzenAlert>
+        </div>
+    </div>
+
+
+    <RadzenTemplateForm TItem="PetBreeds" Data="@model" Submit="OnUpdate">
+        <div class="row">
+            <div class="col-lg-12">               
+                <div class="form-group">
+                    <RadzenText>Sub Species <span class="text-danger">*</span></RadzenText>
+                    <div class="input-group">
+                        <RadzenDropDown Name="PetSubSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSubSpeciesID TextProperty="PetSubSpeciesNameEN" ValueProperty="PetSubSpeciesID" Data=@petSubSpeciesList class="w-100" />
+                    </div>
+                    <RadzenRequiredValidator Component="PetSubSpeciesID" Text="Pet Breeds is required" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>Name (English)</RadzenText>
+                    <div class="input-group">
+                        <RadzenTextBox Name="PetBreedNameEN" @bind-Value=@model.PetBreedNameEN class="w-100" />
+                    </div>
+                    <RadzenLengthValidator Component="PetBreedNameEN" Min="3" Text="Pet breed name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                    <RadzenLengthValidator Component="PetBreedNameEN" Max="50" Text="Pet breed name should be at most 50 characters" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>Name (Arabic)</RadzenText>
+                    <div class="input-group">
+                        <RadzenTextBox Name="PetBreedNameAR" @bind-Value=@model.PetBreedNameAR class="w-100" />
+                    </div>
+                    <RadzenLengthValidator Component="PetBreedNameAR" Min="3" Text="Pet breed name should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                    <RadzenLengthValidator Component="PetBreedNameAR" Max="150" Text="Pet breed name should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenText>Order</RadzenText>
+                    <div class="input-group">
+                        <RadzenNumeric Name="SortOrder" Min="1" TValue="int?" @bind-Value=@model.SortOrder class="w-50" />
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
+                    <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                </div>
+                <div class="form-group mb-1">
+                    <RadzenButton Text="Update" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled="@IsBusy" BusyText="Update..." Click=@((args) => OnUpdate()) />
+                    <RadzenButton Text="Cancel" ButtonType="ButtonType.Button" Disabled="@IsBusy" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Outlined" Shade="Shade.Lighter" Click="@((args)=> dialogService.CloseSide(false))" />
+                </div>
+            </div>
+        </div>
+    </RadzenTemplateForm>
+</div>
+
+
+@code {
+    bool popup=true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+    string message;
+    List<PetSpecies> petSpeciesList = new List<PetSpecies>();
+    List<PetSubSpecies> petSubSpeciesList = new List<PetSubSpecies>();
+
+
+    [Parameter]
+    public int PetBreedID { get; set; }
+
+    PetBreeds model;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        var results = await this.unitofWork.PetCare.PetBreeds.Get(PetBreedID);
+        if (results.status)
+            model = results.data;
+        await GetPetSubSpecies();
+    }
+
+
+    async Task GetPetSubSpecies()
+    {
+
+
+        petSubSpeciesList = this.unitofWork.PetCare.PetSubSpecies.GetAll().ToList();
+    }
+
+    async Task OnUpdate()
+    {
+        IsBusy = true;
+
+        try
+        {
+            await Task.Yield();
+
+            model.PetBreedID = PetBreedID;
+
+            var result = await this.unitofWork.PetCare.PetBreeds.Update(model);
+
+            if (result != null)
+            {
+                if (result.status)
+                {
+                    message = result.message;
+                    showSuccessMessage = true;
+                    showErrorMessage = false;
+
+                    Task.Delay(500);
+                    dialogService.CloseSide(model);
+                }
+                else
+                {
+                    message = "An error occured.";
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                }
+            }
+            else
+            {
+                message = "An error occured.";
+                showSuccessMessage = false;
+                showErrorMessage = true;
+            }
+
+        }
+        catch (Exception ex)
+        {
+            message = ex.Message;
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            throw ex;
+        }
+        finally
+        {
+
+            IsBusy = false;
+            showSuccessMessage = false;
+            showErrorMessage = false;
+        }
+    }
+
+}

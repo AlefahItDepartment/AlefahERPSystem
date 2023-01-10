@@ -1,0 +1,351 @@
+﻿@page "/petbloodchemistrydetails"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@using System.Linq.Dynamic.Core
+@inject IUnitOfWork unitofWork
+@inject DialogService DialogService
+@implements IDisposable
+@attribute [Authorize(Roles = "Admin, Customer")]
+
+<div class="container-fluid">
+
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <RadzenText TextStyle="TextStyle.DisplayH4" TagName="TagName.H4" Text="Pet Blood Chemistry Details" />
+        </div>
+        <div class="col-lg-6">
+            <div class="d-block justify-content-end">
+                <RadzenBreadCrumb Class="rz-text-align-end">
+                    <Template Context="item">
+                        <RadzenBadge Text="@item.Text" IsPill="true" />
+                    </Template>
+                    <ChildContent>
+                        <RadzenBreadCrumbItem Text="Setup" />
+                        <RadzenBreadCrumbItem Text="Pet Care" />
+                        <RadzenBreadCrumbItem Icon="add" Text="Pet Blood Chemistry Details" />
+                    </ChildContent>
+                </RadzenBreadCrumb>
+            </div>
+        </div>
+    </div>
+
+    <RadzenCard Class="mb-3">
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+        <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+            @message
+        </RadzenAlert>
+        <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+            @message
+        </RadzenAlert>
+        <RadzenTemplateForm TItem="PetBloodChemistryDetails" Data="@model" Submit="OnCreate">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <RadzenText>Sub Species <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenDropDown Name="PetSubSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSubSpeciesID TextProperty="PetSubSpeciesNameEN" ValueProperty="PetSubSpeciesID" Data=@petSubSpeciesList class="w-100" />
+                        </div>
+                        <RadzenRequiredValidator Component="PetSubSpeciesID" Text="Pet sub species is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <RadzenText>Blood Screen Type <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenDropDown Name="PetBloodChemsTypeID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetBloodChemsTypeID TextProperty="PetBloodChemsTypeNameEN" ValueProperty="PetBloodChemsTypeID" Data=@petBloodChemsTypesList class="w-100" />
+                        </div>
+                        <RadzenRequiredValidator Component="PetBloodChemsTypeID" Text="Pet blood screen type is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <RadzenText>Low <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenNumeric class="w-100" Name="Low" @bind-Value="@model.Low" />
+                        </div>
+                        <RadzenRequiredValidator Component="Low" Min="0" Text="Low field is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <RadzenText>High <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenNumeric class="w-100" Name="High" @bind-Value="@model.High" />
+                        </div>
+                        <RadzenRequiredValidator Component="High" Min="0" Text="High field is required" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="float-start d-block" style="margin-top:30px !important;">
+                        <RadzenCheckBox @bind-Value=@model.Ok Name="Ok" TValue="bool?" />
+                        <RadzenLabel Text="Is Ok" Component="Ok" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group">
+                        <RadzenText>Positive <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenTextBox class="w-100" Name="Positive" @bind-Value="@model.Positive" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="float-start d-block" style="margin-top:25px !important;">
+                        <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                        <RadzenButton Text="Reset" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Primary" Variant="Variant.Outlined" Shade="Shade.Lighter" />
+                    </div>
+                </div>
+            </div>
+        </RadzenTemplateForm>
+    </RadzenCard>
+
+    <RadzenCard class="mb-3">
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Pet Blood Chemistry Detail</RadzenText>
+        <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@PetBloodChemistryDetails" Count="@count" IsLoading="@IsDataGridLoading" TItem="PetBloodChemistryDetails" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+            <Columns>
+                <RadzenDataGridColumn TItem="PetBloodChemistryDetails" Property="PetSubSpeciesID" Title="Species ID" Frozen="true">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="PetBloodChemistryDetails" Property="PetBloodChemsTypeID" Title="Type ID" />
+                <RadzenDataGridColumn TItem="PetBloodChemistryDetails" Property="Low" Type=(typeof(double)) Title="Low" />
+                <RadzenDataGridColumn TItem="PetBloodChemistryDetails" Property="High" Type=(typeof(double)) Title="High" />
+                <RadzenDataGridColumn TItem="PetBloodChemistryDetails" Property="Ok" Type=(typeof(bool)) Title="Is Ok" />
+                <RadzenDataGridColumn TItem="PetBloodChemistryDetails" Property="Postive" Type=(typeof(string)) Title="Postive" />
+                <RadzenDataGridColumn TItem="PetBloodChemistryDetails" Property="PetBloodChemsDetailID" Title="Action" Sortable="false" Filterable="false">
+                    <Template Context="item">
+                        <RadzenButton ButtonStyle="ButtonStyle.Warning" Variant="Variant.Flat" Shade="Shade.Lighter" Text="Edit" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.PetBloodChemsDetailID)) />
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Text="Delete" Icon="delete" Click=@(agrds => OnDelete(item.PetBloodChemsDetailID)) />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</div>
+
+
+
+
+@code {
+
+    bool checkBox1Value = true;
+    PetBloodChemistryDetails model = new PetBloodChemistryDetails();
+    List<PetSubSpecies> petSubSpeciesList = new List<PetSubSpecies>();
+    List<PetBloodChemistryTypes> petBloodChemsTypesList = new List<PetBloodChemistryTypes>();
+    List<PetBloodChemistryDetails> PetBloodChemistryDetails = new List<PetBloodChemistryDetails>();
+
+    RadzenDataGrid<PetBloodChemistryDetails>? grid;
+    bool IsDataGridLoading = false;
+    int count = 0;
+    string? message;
+    bool popup = true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        DialogService.OnOpen += Open;
+        DialogService.OnClose += Close;
+
+        await PreGridLoadData();
+        await GetPetSubSpecies();
+        await GetPetBloodChemsTypes();
+    }
+    public void Dispose()
+    {
+        DialogService.OnOpen -= Open;
+        DialogService.OnClose -= Close;
+    }
+
+    async Task GridLoadData(LoadDataArgs args)
+    {
+
+        await PreGridLoadData(args);
+    }
+
+    async Task PreGridLoadData(LoadDataArgs? args = null)
+    {
+
+        IsDataGridLoading = true;
+
+
+        await Task.Yield();
+
+        IQueryable<PetBloodChemistryDetails> query = this.unitofWork.PetCare.PetBloodChemistryDetails.GetAll();
+
+        if (args != null)
+        {
+            if (!string.IsNullOrEmpty(args.Filter))
+            {
+
+                query = query.Where(args.Filter);
+            }
+
+            if (!string.IsNullOrEmpty(args.OrderBy))
+            {
+                query = query.OrderBy(args.OrderBy);
+            }
+            else
+            {
+                query = query.OrderByDescending(o => o.PetBloodChemsDetailID);
+            }
+        }
+        else
+        {
+
+            query = query.OrderByDescending(o => o.PetBloodChemsDetailID);
+        }
+
+        count = query.Count();
+
+        if (args == null)
+        {
+            query = query.Skip(0).Take(5);
+        }
+        else
+        {
+            query = query.Skip(args.Skip.Value).Take(args.Top.Value);
+        }
+
+        PetBloodChemistryDetails = query.ToList();
+
+        IsDataGridLoading = false;
+    }
+
+    async Task OnCreate()
+    {
+        try
+        {
+            await Task.Yield();
+
+            IsBusy = true;
+            if (model != null)
+            {
+                var results = await this.unitofWork.PetCare.PetBloodChemistryDetails.Add(model);
+
+                if (results != null)
+                {
+                    if (results.status)
+                    {
+                        showSuccessMessage = true;
+                        showErrorMessage = false;
+
+                        message = results.message;
+
+                        model = new PetBloodChemistryDetails();
+
+                        if (grid != null)
+                            await grid.Reload();
+                    }
+
+
+                }
+                else
+                {
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                    message = "An error occured";
+                }
+            }
+            else
+            {
+                showSuccessMessage = false;
+                showErrorMessage = true;
+                message = "An error occured";
+            }
+        }
+        catch (Exception ex)
+        {
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            message = ex.Message;
+            throw ex;
+
+        }
+        finally
+        {
+            showSuccessMessage = false;
+            showErrorMessage = false;
+            IsBusy = false;
+        }
+    }
+
+
+    async Task OnDelete(int PetBloodChemistryDetailsID)
+    {
+        try
+        {
+
+            var confirm = await DialogService.Confirm("Are you sure!, You want to delete this record.", "Confirm", new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" });
+
+            if (confirm.HasValue)
+            {
+
+                if (confirm.Value)
+                {
+
+                    var result = await this.unitofWork.PetCare.PetBloodChemistryDetails.Delete(PetBloodChemistryDetailsID);
+                    if (result != null)
+                    {
+                        if (result.status)
+                        {
+                            model = new PetBloodChemistryDetails();
+
+                            if (grid != null)
+                                await grid.Reload();
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+        finally
+        {
+
+        }
+    }
+
+
+    async Task OnOpenDialog(int PetBloodChemsDetailID)
+    {
+
+        await DialogService.OpenSideAsync<PetBloodChemistryDetailsEditPage>($"Edit Pet Blood Chemistry Details",
+               new Dictionary<string, object>() { { "PetBloodChemsDetailID", PetBloodChemsDetailID } },
+               new SideDialogOptions() { Position = DialogPosition.Right });
+
+
+    }
+
+    void Open(string title, Type type, Dictionary<string, object> parameters, DialogOptions options)
+    {
+        //console.Log("Dialog opened");
+    }
+
+    void Close(dynamic result)
+    {
+
+    }
+
+
+
+    async Task GetPetSubSpecies()
+    {
+
+
+        petSubSpeciesList = this.unitofWork.PetCare.PetSubSpecies.GetAll().ToList();
+    }
+
+    async Task GetPetBloodChemsTypes()
+    {
+
+        petBloodChemsTypesList = this.unitofWork.PetCare.PetBloodChemistryTypes.GetAll().ToList();
+    }
+
+}

@@ -1,0 +1,317 @@
+﻿@page "/petbloodscreentypes"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@using System.Linq.Dynamic.Core
+@inject IUnitOfWork unitofWork
+@inject DialogService DialogService
+@implements IDisposable
+@attribute [Authorize(Roles = "Admin, Customer")]
+
+<div class="container-fluid">
+
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <RadzenText TextStyle="TextStyle.DisplayH4" TagName="TagName.H4" Text="Pet Blood Screen Types" />
+        </div>
+        <div class="col-lg-6">
+            <div class="d-block justify-content-end">
+                <RadzenBreadCrumb Class="rz-text-align-end">
+                    <Template Context="item">
+                        <RadzenBadge Text="@item.Text" IsPill="true" />
+                    </Template>
+                    <ChildContent>
+                        <RadzenBreadCrumbItem Text="Setup" />
+                        <RadzenBreadCrumbItem Text="Pet Care" />
+                        <RadzenBreadCrumbItem Icon="add" Text="Pet Blood Screen Types" />
+                    </ChildContent>
+                </RadzenBreadCrumb>
+            </div>
+        </div>
+    </div>
+
+    <RadzenCard Class="mb-3">
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+        <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+            @message
+        </RadzenAlert>
+        <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+            @message
+        </RadzenAlert>
+        <RadzenTemplateForm TItem="PetBloodScreenTypes" Data="@model" Submit="OnCreate">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <RadzenText>Name (Enlish) <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenTextBox class="w-100" Name="PetBloodScreenTypeNameEN" @bind-Value="@model.PetBloodScreenTypeNameEN" />
+                        </div>
+                        <RadzenLengthValidator Component="PetBloodScreenTypeNameEN" Min="3" Text="Pet blood Screen type name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                        <RadzenLengthValidator Component="PetBloodScreenTypeNameEN" Max="50" Text="Pet blood Screen type name should be at most 50 characters" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <RadzenText>Name (Arabic) <span class="text-danger">*</span></RadzenText>
+                        <div class="input-group">
+                            <RadzenTextBox class="w-100" Name="PetBloodScreenTypeNameAR" @bind-Value="@model.PetBloodScreenTypeNameAR" />
+                        </div>
+                        <RadzenLengthValidator Component="PetBloodScreenTypeNameAR" Min="3" Text="Pet blood Screen type name should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                        <RadzenLengthValidator Component="PetBloodScreenTypeNameAR" Max="150" Text="Pet blood Screen type name should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <RadzenText>Order</RadzenText>
+                    <RadzenNumeric class="w-100" TValue=int? Min="1" @bind-Value="@model.SortOrder" />
+                </div>
+                <div class="col-md-1">
+                    <div class="float-start d-block" style="margin-top:30px !important;">
+                        <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
+                        <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="float-start d-block" style="margin-top:25px !important;">
+                        <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                        <RadzenButton Text="Reset" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Primary" Variant="Variant.Outlined" Shade="Shade.Lighter" />
+                    </div>
+                </div>
+            </div>
+        </RadzenTemplateForm>
+    </RadzenCard>
+
+    <RadzenCard class="mb-3">
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Pet Blood Screen Types Detail</RadzenText>
+        <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@petBloodScreenTypes" Count="@count" IsLoading="@IsDataGridLoading" TItem="PetBloodScreenTypes" AllowFiltering="true" AllowColumnReBloodScreenType="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageBloodScreenType="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+            <Columns>
+                <RadzenDataGridColumn TItem="PetBloodScreenTypes" Property="PetBloodScreenTypeNameEN" Title="BloodScreenType Name (En)" Frozen="true">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="PetBloodScreenTypes" Property="PetBloodScreenTypeNameAR" Title="BloodScreenType Name (Ar)" />
+                <RadzenDataGridColumn TItem="PetBloodScreenTypes" Property="SortOrder" Title="Sort Order" />
+                <RadzenDataGridColumn TItem="PetBloodScreenTypes" Property="IsActive" Title="Status">
+                    <Template Context="item">
+                        <span class="rz-badge rz-shade-lighter @(item.IsActive.HasValue? (item.IsActive == true ? "rz-badge-success": "rz-badge-danger") :"rz-badge-danger")">
+                            @(item.IsActive.HasValue ? (item.IsActive == true ? "Active" : "Inactive") : "Inactive")
+                        </span>
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="PetBloodScreenTypes" Property="PetBloodScreenTypeID" Title="Action" Sortable="false" Filterable="false">
+                    <Template Context="item">
+                        <RadzenButton ButtonStyle="ButtonStyle.Warning" Variant="Variant.Flat" Shade="Shade.Lighter" Text="Edit" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.PetBloodScreenTypeID)) />
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Text="Delete" Icon="delete" Click=@(agrds => OnDelete(item.PetBloodScreenTypeID)) />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</div>
+
+
+
+
+@code {
+
+    bool checkBox1Value = true;
+    PetBloodScreenTypes model = new PetBloodScreenTypes();
+    List<PetBloodScreenTypes> petBloodScreenTypes = new List<PetBloodScreenTypes>();
+    RadzenDataGrid<PetBloodScreenTypes>? grid;
+    bool IsDataGridLoading = false;
+    int count = 0;
+    string? message;
+    bool popup = true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        DialogService.OnOpen += Open;
+        DialogService.OnClose += Close;
+
+        await PreGridLoadData();
+    }
+    public void Dispose()
+    {
+        DialogService.OnOpen -= Open;
+        DialogService.OnClose -= Close;
+    }
+
+    async Task GridLoadData(LoadDataArgs args)
+    {
+
+        await PreGridLoadData(args);
+    }
+
+    async Task PreGridLoadData(LoadDataArgs? args = null)
+    {
+
+        IsDataGridLoading = true;
+
+
+        await Task.Yield();
+
+        IQueryable<PetBloodScreenTypes> query = this.unitofWork.PetCare.PetBloodScreenTypes.GetAll();
+
+        if (args != null)
+        {
+            if (!string.IsNullOrEmpty(args.Filter))
+            {
+
+                query = query.Where(args.Filter);
+            }
+
+            if (!string.IsNullOrEmpty(args.OrderBy))
+            {
+                query = query.OrderBy(args.OrderBy);
+            }
+            else
+            {
+                query = query.OrderByDescending(o => o.PetBloodScreenTypeID);
+            }
+        }
+        else
+        {
+
+            query = query.OrderByDescending(o => o.PetBloodScreenTypeID);
+        }
+
+        count = query.Count();
+
+        if (args == null)
+        {
+            query = query.Skip(0).Take(5);
+        }
+        else
+        {
+            query = query.Skip(args.Skip.Value).Take(args.Top.Value);
+        }
+
+        petBloodScreenTypes = query.ToList();
+
+        IsDataGridLoading = false;
+    }
+
+    async Task OnCreate()
+    {
+        try
+        {
+            await Task.Yield();
+
+            IsBusy = true;
+            if (model != null)
+            {
+                var results = await this.unitofWork.PetCare.PetBloodScreenTypes.Add(model);
+
+                if (results != null)
+                {
+                    if (results.status)
+                    {
+                        showSuccessMessage = true;
+                        showErrorMessage = false;
+
+                        message = results.message;
+
+                        model = new PetBloodScreenTypes();
+
+                        if (grid != null)
+                            await grid.Reload();
+                    }
+
+
+                }
+                else
+                {
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                    message = "An error occured";
+                }
+            }
+            else
+            {
+                showSuccessMessage = false;
+                showErrorMessage = true;
+                message = "An error occured";
+            }
+        }
+        catch (Exception ex)
+        {
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            message = ex.Message;
+            throw ex;
+
+        }
+        finally
+        {
+            showSuccessMessage = false;
+            showErrorMessage = false;
+            IsBusy = false;
+        }
+    }
+
+
+    async Task OnDelete(int PetBloodScreenTypesID)
+    {
+        try
+        {
+
+            var confirm = await DialogService.Confirm("Are you sure!, You want to delete this record.", "Confirm", new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" });
+
+            if (confirm.HasValue)
+            {
+
+                if (confirm.Value)
+                {
+
+                    var result = await this.unitofWork.PetCare.PetBloodScreenTypes.Delete(PetBloodScreenTypesID);
+                    if (result != null)
+                    {
+                        if (result.status)
+                        {
+                            model = new PetBloodScreenTypes();
+
+                            if (grid != null)
+                                await grid.Reload();
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+        finally
+        {
+
+        }
+    }
+
+
+    async Task OnOpenDialog(int PetBloodScreenTypeID)
+    {
+
+        await DialogService.OpenSideAsync<PetBloodScreenTypesEditPage>($"Edit Pet Blood Screen Types",
+               new Dictionary<string, object>() { { "PetBloodScreenTypeID", PetBloodScreenTypeID } },
+               new SideDialogOptions() { Position = DialogPosition.Right });
+
+
+    }
+
+    void Open(string title, Type type, Dictionary<string, object> parameters, DialogOptions options)
+    {
+        //console.Log("Dialog opened");
+    }
+
+    void Close(dynamic result)
+    {
+
+    }
+
+
+
+}

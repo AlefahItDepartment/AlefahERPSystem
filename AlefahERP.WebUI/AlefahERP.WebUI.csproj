@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\WeatherForecast.cs" />
+    <Compile Remove="Data\WeatherForecastService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\EventConsole.razor" />
+    <Content Remove="Pages\FetchData.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\fonts\MaterialSymbols-Outlined.woff2" />
+    <None Include="wwwroot\images\accenture.svg" />
+    <None Include="wwwroot\images\allianz.svg" />
+    <None Include="wwwroot\images\background.svg" />
+    <None Include="wwwroot\images\checkmark.svg" />
+    <None Include="wwwroot\images\community.svg" />
+    <None Include="wwwroot\images\dell.svg" />
+    <None Include="wwwroot\images\deloitte.svg" />
+    <None Include="wwwroot\images\DHL.svg" />
+    <None Include="wwwroot\images\easier-than-you-think.svg" />
+    <None Include="wwwroot\images\eurobank.svg" />
+    <None Include="wwwroot\images\import.svg" />
+    <None Include="wwwroot\images\include-radzen.svg" />
+    <None Include="wwwroot\images\install.svg" />
+    <None Include="wwwroot\images\konica-minolta.svg" />
+    <None Include="wwwroot\images\microsoft.svg" />
+    <None Include="wwwroot\images\nasa.svg" />
+    <None Include="wwwroot\images\nokia.svg" />
+    <None Include="wwwroot\images\play.svg" />
+    <None Include="wwwroot\images\porsche.svg" />
+    <None Include="wwwroot\images\premium.svg" />
+    <None Include="wwwroot\images\siemens.svg" />
+    <None Include="wwwroot\images\success.svg" />
+    <None Include="wwwroot\images\theme.svg" />
+    <None Include="wwwroot\images\use-component.svg" />
+    <None Include="wwwroot\js\blazor.server.js" />
+    <None Include="wwwroot\js\highlight.pack.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Radzen.Blazor" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AlefahERP.Common\AlefahERP.Common.csproj" />
+    <ProjectReference Include="..\AlefahERP.DTO\AlefahERP.DTO.csproj" />
+    <ProjectReference Include="..\AlefahERP.Services\AlefahERP.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\css\site.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
