@@ -17,3 +17,22 @@ D:\ALEFAH ERP\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.d
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\refint\AlefahERP.Services.dll
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.pdb
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\ref\AlefahERP.Services.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.Services.deps.json
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.Services.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.Services.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.Common.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.DTO.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.Repository.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.Common.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.DTO.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\bin\Debug\net7.0\AlefahERP.Repository.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.csproj.AssemblyReference.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.AssemblyInfoInputs.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.AssemblyInfo.cs
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.csproj.CoreCompileInputs.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.csproj.CopyComplete
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\refint\AlefahERP.Services.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\AlefahERP.Services.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Services\obj\Debug\net7.0\ref\AlefahERP.Services.dll

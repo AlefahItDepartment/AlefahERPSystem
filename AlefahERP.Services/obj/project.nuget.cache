@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y4hUvqR5GaJFySs6u8o6ocZHsUfk4v2pXQ/O9jT3rhLIhEsNGPmFUw8pNLqxSKdJIbRCqXdyOaQvf3WW/f5luA==",
+  "dgSpecHash": "odmj32Sit42vEnzdoznup7HqgTxljor3QkhaofAppP4WO9gnCR7HjqFginHUC1oRg3J9fMrxKLHLw3vR8gC6/g==",
   "success": true,
-  "projectFilePath": "D:\\ALEFAH ERP\\AlefahERP\\AlefahERP.Services\\AlefahERP.Services.csproj",
+  "projectFilePath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Services\\AlefahERP.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Imran\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Imran\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -10,3 +10,15 @@ D:\ALEFAH ERP\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.dll
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\refint\AlefahERP.Common.dll
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.pdb
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\ref\AlefahERP.Common.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\bin\Debug\net7.0\AlefahERP.Common.deps.json
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\bin\Debug\net7.0\AlefahERP.Common.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\bin\Debug\net7.0\AlefahERP.Common.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.csproj.AssemblyReference.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.AssemblyInfoInputs.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.AssemblyInfo.cs
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.csproj.CoreCompileInputs.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\refint\AlefahERP.Common.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\AlefahERP.Common.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Common\obj\Debug\net7.0\ref\AlefahERP.Common.dll

@@ -15,3 +15,20 @@ D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Reposito
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\refint\AlefahERP.Repository.dll
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.pdb
 D:\ALEFAH ERP\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\ref\AlefahERP.Repository.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\bin\Debug\net7.0\AlefahERP.Repository.deps.json
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\bin\Debug\net7.0\AlefahERP.Repository.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\bin\Debug\net7.0\AlefahERP.Repository.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\bin\Debug\net7.0\AlefahERP.Common.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\bin\Debug\net7.0\AlefahERP.DTO.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\bin\Debug\net7.0\AlefahERP.Common.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\bin\Debug\net7.0\AlefahERP.DTO.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.csproj.AssemblyReference.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.AssemblyInfoInputs.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.AssemblyInfo.cs
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.csproj.CoreCompileInputs.cache
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.csproj.CopyComplete
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\refint\AlefahERP.Repository.dll
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\AlefahERP.Repository.pdb
+D:\ALEFAHERP_GIT\AlefahERP\AlefahERP.Repository\obj\Debug\net7.0\ref\AlefahERP.Repository.dll
