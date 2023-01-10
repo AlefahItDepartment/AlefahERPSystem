@@ -14,6 +14,38 @@
                  Updated=true,
 
             },
+               new Navigation {
+
+                Name="Pet Care",
+                Icon="pets",
+                Children = new []
+                {
+                    new Navigation {
+
+                        Name="Appointments",
+                        Path="/appointments",
+                        Icon="recent_actors"
+
+                    }
+                }
+
+            },
+               new Navigation {
+
+                Name="HR Management",
+                Icon="groups",
+                Children = new []
+                {
+                    new Navigation {
+
+                        Name="Employees",
+                        Path="/employees",
+                        Icon="people"
+
+                    }
+                }
+
+            },
             new Navigation {
 
                 Name="Setup",
@@ -143,8 +175,7 @@
 
                 }
                 
-            },
-               new Navigation {
+            },new Navigation {
 
                 Name="Settings",
                 Icon="settings",
