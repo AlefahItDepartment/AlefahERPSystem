@@ -28,58 +28,59 @@
         </div>
     </div>
 
-    <RadzenCard Class="mb-3">
-        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
-        <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
-            @message
-        </RadzenAlert>
-        <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
-            @message
-        </RadzenAlert>
-        <RadzenTemplateForm TItem="Region" Data="@model" Submit="OnCreate">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <RadzenText>Region Code <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenDropDown @bind-Value="@model.CountryID" TextProperty="CountryName" ValueProperty="CountryID" Data="@countries" class="w-100">
+   
 
-                            </RadzenDropDown>
-                        </div>
-                        <RadzenRequiredValidator Component="CountryID" Text="Country field is required." Popup=@popup Style="position:absolute" />                        
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <RadzenText>Region Code <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="RegionName" @bind-Value="@model.RegionName" />
-                        </div>
-                        <RadzenLengthValidator Component="RegionName" Min="3" Text="Region name should be at least 5 characters" Popup=@popup Style="position:absolute" />
-                        <RadzenLengthValidator Component="RegionName" Max="50" Text="Region name should be at most 50 characters" Popup=@popup Style="position:absolute" />
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <RadzenText>Region Code <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="RegionCode" @bind-Value="@model.RegionCode" />
-                        </div>
-                        <RadzenLengthValidator Component="RegionCode" Min="3" Text="Region code should be at least 10 characters" Popup=@popup Style="position:absolute" />
-                        <RadzenLengthValidator Component="RegionCode" Max="150" Text="Region code should be at most 150 characters" Popup=@popup Style="position:absolute" />
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="float-start d-block" style="margin-top:25px !important;">
-                        <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
-                        <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
-                    </div>
-                </div>
-            </div>
-        </RadzenTemplateForm>
-    </RadzenCard>
+    <RadzenCard>
+        <RadzenCard Class="mb-3">
+            <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+            <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+                @message
+            </RadzenAlert>
+            <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+                @message
+            </RadzenAlert>
+            <RadzenTemplateForm TItem="Region" Data="@model" Submit="OnCreate">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <RadzenText>Region Code <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenDropDown @bind-Value="@model.CountryID" TextProperty="CountryName" ValueProperty="CountryID" Data="@countries" class="w-100">
 
-    <RadzenCard class="mb-3">
+                                </RadzenDropDown>
+                            </div>
+                            <RadzenRequiredValidator Component="CountryID" Text="Country field is required." Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <RadzenText>Region Code <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="RegionName" @bind-Value="@model.RegionName" />
+                            </div>
+                            <RadzenLengthValidator Component="RegionName" Min="3" Text="Region name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="RegionName" Max="50" Text="Region name should be at most 50 characters" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <RadzenText>Region Code <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="RegionCode" @bind-Value="@model.RegionCode" />
+                            </div>
+                            <RadzenLengthValidator Component="RegionCode" Min="3" Text="Region code should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="RegionCode" Max="150" Text="Region code should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="float-start d-block" style="margin-top:25px !important;">
+                            <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                            <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                        </div>
+                    </div>
+                </div>
+            </RadzenTemplateForm>
+        </RadzenCard>
         <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Region Detail</RadzenText>
         <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@Region" Count="@count" IsLoading="@IsDataGridLoading" TItem="Region" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
             <Columns>

@@ -27,54 +27,52 @@
             </div>
         </div>
     </div>
-
-    <RadzenCard Class="mb-3">
-        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
-        <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
-            @message
-        </RadzenAlert>
-        <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
-            @message
-        </RadzenAlert>
-        <RadzenTemplateForm TItem="Department" Data="@model" Submit="OnCreate">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <RadzenText>Name (Enlish) <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="DepartmentNameEN" @bind-Value="@model.DepartmentNameEN" />
+    <RadzenCard>
+        <RadzenCard Class="mb-3">
+            <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+            <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+                @message
+            </RadzenAlert>
+            <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+                @message
+            </RadzenAlert>
+            <RadzenTemplateForm TItem="Department" Data="@model" Submit="OnCreate">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <RadzenText>Name (Enlish) <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="DepartmentNameEN" @bind-Value="@model.DepartmentNameEN" />
+                            </div>
+                            <RadzenLengthValidator Component="DepartmentNameEN" Min="3" Text="Department name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="DepartmentNameEN" Max="50" Text="Department name should be at most 50 characters" Popup=@popup Style="position:absolute" />
                         </div>
-                        <RadzenLengthValidator Component="DepartmentNameEN" Min="3" Text="Department name should be at least 5 characters" Popup=@popup Style="position:absolute" />
-                        <RadzenLengthValidator Component="DepartmentNameEN" Max="50" Text="Department name should be at most 50 characters" Popup=@popup Style="position:absolute" />
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <RadzenText>Name (Arabic) <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="DepartmentNameAR" @bind-Value="@model.DepartmentNameAR" />
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <RadzenText>Name (Arabic) <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="DepartmentNameAR" @bind-Value="@model.DepartmentNameAR" />
+                            </div>
+                            <RadzenLengthValidator Component="DepartmentNameAR" Min="3" Text="Department name should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="DepartmentNameAR" Max="150" Text="Department name should be at most 150 characters" Popup=@popup Style="position:absolute" />
                         </div>
-                        <RadzenLengthValidator Component="DepartmentNameAR" Min="3" Text="Department name should be at least 10 characters" Popup=@popup Style="position:absolute" />
-                        <RadzenLengthValidator Component="DepartmentNameAR" Max="150" Text="Department name should be at most 150 characters" Popup=@popup Style="position:absolute" />
                     </div>
-                </div>                
-                <div class="col-md-1">
-                    <div class="float-start d-block" style="margin-top:30px !important;">
-                        <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
-                        <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                    <div class="col-md-1">
+                        <div class="float-start d-block" style="margin-top:30px !important;">
+                            <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
+                            <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="float-start d-block" style="margin-top:25px !important;">
-                        <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
-                        <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                    <div class="col-md-2">
+                        <div class="float-start d-block" style="margin-top:25px !important;">
+                            <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                            <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </RadzenTemplateForm>
-    </RadzenCard>
-
-    <RadzenCard class="mb-3">
+            </RadzenTemplateForm>
+        </RadzenCard>
         <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Department Detail</RadzenText>
         <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@Department" Count="@count" IsLoading="@IsDataGridLoading" TItem="Department" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
             <Columns>

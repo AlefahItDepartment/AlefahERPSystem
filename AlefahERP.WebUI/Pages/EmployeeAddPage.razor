@@ -1,0 +1,332 @@
+﻿@page "/employeeadd"
+@using System.Linq.Dynamic.Core
+@inject DialogService DialogService
+@implements IDisposable
+@attribute [Authorize(Roles = "Admin, Customer")]
+<div class="container-fluid">
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <RadzenText TextStyle="TextStyle.DisplayH4" TagName="TagName.H4" Text="Add Employee" />
+        </div>
+        <div class="col-lg-6">
+            <div class="d-block justify-content-end">
+                <RadzenBreadCrumb Class="rz-text-align-end">
+                    <Template Context="item">
+                        <RadzenBadge Text="@item.Text" IsPill="true" />
+                    </Template>
+                    <ChildContent>
+                        <RadzenBreadCrumbItem Text="HR Management" />
+                        <RadzenBreadCrumbItem Icon="add" Text="Add Employee" />
+                    </ChildContent>
+                </RadzenBreadCrumb>
+            </div>
+        </div>
+    </div>
+    <RadzenCard>
+
+        <RadzenSteps>
+            <Steps>
+                <RadzenStepsItem Text="Personal Information">
+                    <div class="row">
+                        <div class="col-lg-12 mb-3 px-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Employee Picture</RadzenText>
+                                <RadzenFileInput @bind-Value=@photo TValue="string" @bind-FileName=@fileName @bind-FileSize=@fileSize Class="w-100"
+                                                 Change=@(args => OnChange(args, "FileInput")) Error=@(args => OnError(args, "FileInput")) />
+                            </RadzenCard>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Employee Code</RadzenLabel>
+                            <RadzenTextBox Name="EmployeeCode" class="w-100" />
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xl-3 col-sm-12">
+                            <RadzenLabel>First Name</RadzenLabel>
+                            <RadzenTextBox Name="FirstName" class="w-100" />
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-xl-2 col-sm-12">
+                            <RadzenLabel>Middle Name</RadzenLabel>
+                            <RadzenTextBox Name="MiddleName" class="w-100" />
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xl-3 col-sm-12">
+                            <RadzenLabel>Last Name</RadzenLabel>
+                            <RadzenTextBox Name="LastName" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Date of Birth</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="DateofBirth" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Gender</RadzenLabel>
+                            <RadzenDropDown Name="Gender" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Nationality</RadzenLabel>
+                            <RadzenDropDown Name="Nationality" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>National/Iqama ID</RadzenLabel>
+                            <RadzenTextBox Name="IDNumber" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Expiry Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="IDExpiry" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Passport No</RadzenLabel>
+                            <RadzenTextBox Name="PassportNo" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Expiry Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="PassportExpiry" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Mobile</RadzenLabel>
+                            <RadzenTextBox Name="Mobile" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Email</RadzenLabel>
+                            <RadzenTextBox Name="Email" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Qualification</RadzenLabel>
+                            <RadzenDropDown Name="Qualification" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Specialization</RadzenLabel>
+                            <RadzenDropDown Name="Specialization" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Religion</RadzenLabel>
+                            <RadzenDropDown Name="Religion" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                    </div>
+                </RadzenStepsItem>
+                <RadzenStepsItem Text="Employement Detail">
+                    <div class="row">
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Site</RadzenLabel>
+                            <RadzenDropDown Name="Site" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Project</RadzenLabel>
+                            <RadzenDropDown Name="Project" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Department</RadzenLabel>
+                            <RadzenDropDown Name="Department" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Section</RadzenLabel>
+                            <RadzenDropDown Name="Section" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Designation/Position</RadzenLabel>
+                            <RadzenDropDown Name="Designation" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Category</RadzenLabel>
+                            <RadzenDropDown Name="Category" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Hiring Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="HiringDate" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Employement Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="EmployementDate" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Contract Type</RadzenLabel>
+                            <RadzenDropDown Name="ContractType" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Contract Start Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="ContractStartDate" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Contract End Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="ContractEndDate" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Employement Status</RadzenLabel>
+                            <RadzenDropDown Name="EmployementStatus" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Insurance Company</RadzenLabel>
+                            <RadzenDropDown Name="InsuranceCompany" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Insurance Type</RadzenLabel>
+                            <RadzenDropDown Name="InsuranceType" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Insurance Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="InsuranceDate" class="w-100" />
+                        </div>
+                    </div>
+                </RadzenStepsItem>
+                <RadzenStepsItem Text="Address">
+
+                    <div class="row mb-3">
+                        <div class="col-lg-12">
+                            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">National Address</RadzenText>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <RadzenLabel Text="Address Line 1" />
+                            <RadzenTextBox Name="AddressLine1" class="w-100" />
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <RadzenLabel Text="Address Line 2" />
+                            <RadzenTextBox Name="AddressLine2" class="w-100" />
+                        </div>
+                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
+                            <RadzenLabel>Country</RadzenLabel>
+                            <RadzenDropDown Name="CountryID" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
+                            <RadzenLabel>Region</RadzenLabel>
+                            <RadzenDropDown Name="RegionID" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
+                            <RadzenLabel>Zip Code</RadzenLabel>
+                            <RadzenTextBox Name="ZipCode" class="w-100" />
+                        </div>
+                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
+                            <RadzenLabel>City</RadzenLabel>
+                            <RadzenDropDown Name="CityID" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-12">
+                            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Home Address</RadzenText>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <RadzenLabel Text="Address Line 1" />
+                            <RadzenTextBox Name="AddressLine1" class="w-100" />
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <RadzenLabel Text="Address Line 2" />
+                            <RadzenTextBox Name="AddressLine2" class="w-100" />
+                        </div>
+                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
+                            <RadzenLabel>Country</RadzenLabel>
+                            <RadzenDropDown Name="CountryID" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
+                            <RadzenLabel>Region</RadzenLabel>
+                            <RadzenTextBox Name="Region" class="w-100" />
+                        </div>
+                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
+                            <RadzenLabel>Zip Code</RadzenLabel>
+                            <RadzenTextBox Name="ZipCode" class="w-100" />
+                        </div>
+                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
+                            <RadzenLabel>City</RadzenLabel>
+                            <RadzenTextBox Name="City" class="w-100" />
+                        </div>
+
+                    </div>
+                </RadzenStepsItem>
+                <RadzenStepsItem Text="Attachments">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 px-3 mb-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">National/Iqama ID</RadzenText>
+                                <RadzenFileInput TValue="string"></RadzenFileInput>
+                            </RadzenCard>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 px-3 mb-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Passport</RadzenText>
+                                <RadzenFileInput TValue="string"></RadzenFileInput>
+                            </RadzenCard>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 px-3 mb-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">CV</RadzenText>
+                                <RadzenFileInput TValue="string"></RadzenFileInput>
+                            </RadzenCard>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 px-3 mb-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Contract</RadzenText>
+                                <RadzenFileInput TValue="string"></RadzenFileInput>
+                            </RadzenCard>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 px-3 mb-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Degree/Diploma Front End</RadzenText>
+                                <RadzenFileInput TValue="string"></RadzenFileInput>
+                            </RadzenCard>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 px-3 mb-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Degree/Diploma Back End</RadzenText>
+                                <RadzenFileInput TValue="string"></RadzenFileInput>
+                            </RadzenCard>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 px-3 mb-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Transcript/Result Card</RadzenText>
+                                <RadzenFileInput TValue="string"></RadzenFileInput>
+                            </RadzenCard>
+                        </div>
+                    </div>
+                </RadzenStepsItem>
+                <RadzenStepsItem Text="User Role">
+
+                </RadzenStepsItem>
+                <RadzenStepsItem Text="Finish"></RadzenStepsItem>
+            </Steps>
+        </RadzenSteps>
+    </RadzenCard>
+</div>
+
+@code {
+    string photo;
+    string fileName;
+    long? fileSize;
+
+    void OnChange(string value, string name)
+    {
+        //console.Log($"{name} value changed");
+
+
+        photo = value;
+    }
+
+    void OnError(UploadErrorEventArgs args, string name)
+    {
+        //console.Log($"{args.Message}");
+    }
+
+    //List<string> genders = new string[] { "Male", "Female", "Transgender" };
+
+
+
+
+    public void Dispose()
+    {
+
+    }
+
+}

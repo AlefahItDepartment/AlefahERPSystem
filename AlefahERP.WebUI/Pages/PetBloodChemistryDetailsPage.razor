@@ -28,78 +28,76 @@
             </div>
         </div>
     </div>
-
-    <RadzenCard Class="mb-3">
-        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
-        <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
-            @message
-        </RadzenAlert>
-        <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
-            @message
-        </RadzenAlert>
-        <RadzenTemplateForm TItem="PetBloodChemistryDetails" Data="@model" Submit="OnCreate">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <RadzenText>Sub Species <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenDropDown Name="PetSubSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSubSpeciesID TextProperty="PetSubSpeciesNameEN" ValueProperty="PetSubSpeciesID" Data=@petSubSpeciesList class="w-100" />
-                        </div>
-                        <RadzenRequiredValidator Component="PetSubSpeciesID" Text="Pet sub species is required" Popup=@popup Style="position:absolute" />
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <RadzenText>Blood Screen Type <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenDropDown Name="PetBloodChemsTypeID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetBloodChemsTypeID TextProperty="PetBloodChemsTypeNameEN" ValueProperty="PetBloodChemsTypeID" Data=@petBloodChemsTypesList class="w-100" />
-                        </div>
-                        <RadzenRequiredValidator Component="PetBloodChemsTypeID" Text="Pet blood screen type is required" Popup=@popup Style="position:absolute" />
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <div class="form-group">
-                        <RadzenText>Low <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenNumeric class="w-100" Name="Low" @bind-Value="@model.Low" />
-                        </div>
-                        <RadzenRequiredValidator Component="Low" Min="0" Text="Low field is required" Popup=@popup Style="position:absolute" />
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <div class="form-group">
-                        <RadzenText>High <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenNumeric class="w-100" Name="High" @bind-Value="@model.High" />
-                        </div>
-                        <RadzenRequiredValidator Component="High" Min="0" Text="High field is required" Popup=@popup Style="position:absolute" />
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <div class="float-start d-block" style="margin-top:30px !important;">
-                        <RadzenCheckBox @bind-Value=@model.Ok Name="Ok" TValue="bool?" />
-                        <RadzenLabel Text="Is Ok" Component="Ok" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <div class="form-group">
-                        <RadzenText>Positive <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="Positive" @bind-Value="@model.Positive" />
+    <RadzenCard>
+        <RadzenCard Class="mb-3">
+            <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+            <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+                @message
+            </RadzenAlert>
+            <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+                @message
+            </RadzenAlert>
+            <RadzenTemplateForm TItem="PetBloodChemistryDetails" Data="@model" Submit="OnCreate">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <RadzenText>Sub Species <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenDropDown Name="PetSubSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSubSpeciesID TextProperty="PetSubSpeciesNameEN" ValueProperty="PetSubSpeciesID" Data=@petSubSpeciesList class="w-100" />
+                            </div>
+                            <RadzenRequiredValidator Component="PetSubSpeciesID" Text="Pet sub species is required" Popup=@popup Style="position:absolute" />
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="float-start d-block" style="margin-top:25px !important;">
-                        <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
-                        <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <RadzenText>Blood Screen Type <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenDropDown Name="PetBloodChemsTypeID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetBloodChemsTypeID TextProperty="PetBloodChemsTypeNameEN" ValueProperty="PetBloodChemsTypeID" Data=@petBloodChemsTypesList class="w-100" />
+                            </div>
+                            <RadzenRequiredValidator Component="PetBloodChemsTypeID" Text="Pet blood screen type is required" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <RadzenText>Low <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenNumeric class="w-100" Name="Low" @bind-Value="@model.Low" />
+                            </div>
+                            <RadzenRequiredValidator Component="Low" Min="0" Text="Low field is required" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <RadzenText>High <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenNumeric class="w-100" Name="High" @bind-Value="@model.High" />
+                            </div>
+                            <RadzenRequiredValidator Component="High" Min="0" Text="High field is required" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="float-start d-block" style="margin-top:30px !important;">
+                            <RadzenCheckBox @bind-Value=@model.Ok Name="Ok" TValue="bool?" />
+                            <RadzenLabel Text="Is Ok" Component="Ok" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <RadzenText>Positive <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="Positive" @bind-Value="@model.Positive" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="float-start d-block" style="margin-top:25px !important;">
+                            <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                            <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </RadzenTemplateForm>
-    </RadzenCard>
-
-    <RadzenCard class="mb-3">
+            </RadzenTemplateForm>
+        </RadzenCard>
         <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Pet Blood Chemistry Detail</RadzenText>
         <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@PetBloodChemistryDetails" Count="@count" IsLoading="@IsDataGridLoading" TItem="PetBloodChemistryDetails" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
             <Columns>

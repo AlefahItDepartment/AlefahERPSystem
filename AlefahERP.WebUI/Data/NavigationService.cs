@@ -10,11 +10,12 @@
                  Name  = "Dashbaord",
                  Path ="/",
                  Icon="dashboard",
-                 New=true, 
+                 New=true,
                  Updated=true,
 
             },
-               new Navigation {
+
+            new Navigation {
 
                 Name="Pet Care",
                 Icon="pets",
@@ -22,14 +23,21 @@
                 {
                     new Navigation {
 
-                        Name="Appointments",
-                        Path="/appointments",
-                        Icon="recent_actors"
+                        Name="Menu10",
+                        Path="/Menu10"
+
+                    },
+                    new Navigation {
+
+                        Name="Menu11",
+                        Path="/Menu11"
 
                     }
+
                 }
 
             },
+
                new Navigation {
 
                 Name="HR Management",
@@ -38,11 +46,16 @@
                 {
                     new Navigation {
 
-                        Name="Employees",
-                        Path="/employees",
-                        Icon="people"
+                        Name="Add Employee",
+                        Path="/employeeadd"
 
+                    },
+                    new Navigation {
+
+                        Name="Employees Detail",
+                        Path="/employeesdetail"
                     }
+
                 }
 
             },
@@ -52,8 +65,8 @@
                 Icon="build",
                 Children = new []
                 {
-                    new Navigation { 
-                        
+                    new Navigation {
+
                         Name="Department",
                         Path="/department",
                         Icon="reduce_capacity"
@@ -68,7 +81,7 @@
                     },
                     new Navigation {
 
-                        Name="Pet Care",                       
+                        Name="Pet Care Setup",
                         Icon="pets",
 
                         Children = new []
@@ -174,8 +187,9 @@
                     },
 
                 }
-                
-            },new Navigation {
+
+            },
+               new Navigation {
 
                 Name="Settings",
                 Icon="settings",
@@ -184,15 +198,13 @@
                     new Navigation {
 
                         Name="Menu3",
-                        Path="/Menu3",
-                        Icon="dashboard"
+                        Path="/Menu3"
 
                     },
                     new Navigation {
 
                         Name="Menu4",
-                        Path="/Menu4",
-                        Icon="dashboard"
+                        Path="/Menu4"
 
                     }
 
@@ -241,13 +253,12 @@
 
         //public Navigation FindCurrent(Uri uri)
         //{
-        //    //IEnumerable<Navigation> Flatten(IEnumerable<Navigation> e)
-        //    //{
-        //    //    return e.SelectMany(c => c.Children != null ? Flatten(c.Children) : new[] { c });
-        //    //}
-
-        //    //return Flatten(Navigations)
-        //    //            .FirstOrDefault(example => example.Path == uri.AbsolutePath || $"/{example.Path}" == uri.AbsolutePath);
+        //   IEnumerable<Navigation> Flatten(IEnumerable<Navigation> e)
+        //    {
+        //        return e.SelectMany(c => c.Children != null ? Flatten(c.Children) : new[] { c });
+        //    }
+        //                return Flatten(Navigations)
+        //                .FirstOrDefault(example => example.Path == uri.AbsolutePath || $"/{example.Path}" == uri.AbsolutePath);
         //}
 
     }

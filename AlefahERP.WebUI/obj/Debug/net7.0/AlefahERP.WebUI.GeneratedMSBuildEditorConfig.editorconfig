@@ -64,6 +64,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVzaWduYXRpb25QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/EmployeeAddPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVBZGRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/EmployeesDetailPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVzRGV0YWlsUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

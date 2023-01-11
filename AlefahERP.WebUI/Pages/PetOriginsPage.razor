@@ -28,8 +28,8 @@
             </div>
         </div>
     </div>
-
-    <RadzenCard Class="mb-3">
+    <RadzenCard>
+           <RadzenCard Class="mb-3">
         <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
         <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
             @message
@@ -78,8 +78,6 @@
             </div>
         </RadzenTemplateForm>
     </RadzenCard>
-
-    <RadzenCard class="mb-3">
         <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Origins Detail</RadzenText>
         <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@petOrigins" Count="@count" IsLoading="@IsDataGridLoading" TItem="PetOrigins" AllowFiltering="true" AllowColumnReOrigin="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageOrigin="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
             <Columns>

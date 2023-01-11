@@ -28,58 +28,56 @@
             </div>
         </div>
     </div>
-
-    <RadzenCard Class="mb-3">
-        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
-        <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
-            @message
-        </RadzenAlert>
-        <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
-            @message
-        </RadzenAlert>
-        <RadzenTemplateForm TItem="PetBloodChemistryTypes" Data="@model" Submit="OnCreate">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <RadzenText>Name (Enlish) <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="PetBloodChemsTypeNameEN" @bind-Value="@model.PetBloodChemsTypeNameEN" />
+    <RadzenCard>
+        <RadzenCard Class="mb-3">
+            <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+            <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+                @message
+            </RadzenAlert>
+            <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+                @message
+            </RadzenAlert>
+            <RadzenTemplateForm TItem="PetBloodChemistryTypes" Data="@model" Submit="OnCreate">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <RadzenText>Name (Enlish) <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="PetBloodChemsTypeNameEN" @bind-Value="@model.PetBloodChemsTypeNameEN" />
+                            </div>
+                            <RadzenLengthValidator Component="PetBloodChemsTypeNameEN" Min="3" Text="Pet blood chemistry type name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="PetBloodChemsTypeNameEN" Max="50" Text="Pet blood chemistry type name should be at most 50 characters" Popup=@popup Style="position:absolute" />
                         </div>
-                        <RadzenLengthValidator Component="PetBloodChemsTypeNameEN" Min="3" Text="Pet blood chemistry type name should be at least 5 characters" Popup=@popup Style="position:absolute" />
-                        <RadzenLengthValidator Component="PetBloodChemsTypeNameEN" Max="50" Text="Pet blood chemistry type name should be at most 50 characters" Popup=@popup Style="position:absolute" />
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <RadzenText>Name (Arabic) <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="PetBloodChemsTypeNameAR" @bind-Value="@model.PetBloodChemsTypeNameAR" />
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <RadzenText>Name (Arabic) <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="PetBloodChemsTypeNameAR" @bind-Value="@model.PetBloodChemsTypeNameAR" />
+                            </div>
+                            <RadzenLengthValidator Component="PetBloodChemsTypeNameAR" Min="3" Text="Pet blood chemistry type name should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="PetBloodChemsTypeNameAR" Max="150" Text="Pet blood chemistry type name should be at most 150 characters" Popup=@popup Style="position:absolute" />
                         </div>
-                        <RadzenLengthValidator Component="PetBloodChemsTypeNameAR" Min="3" Text="Pet blood chemistry type name should be at least 10 characters" Popup=@popup Style="position:absolute" />
-                        <RadzenLengthValidator Component="PetBloodChemsTypeNameAR" Max="150" Text="Pet blood chemistry type name should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                    </div>
+                    <div class="col-md-1">
+                        <RadzenText>Order</RadzenText>
+                        <RadzenNumeric class="w-100" TValue=int? Min="1" @bind-Value="@model.SortOrder" />
+                    </div>
+                    <div class="col-md-1">
+                        <div class="float-start d-block" style="margin-top:30px !important;">
+                            <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
+                            <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="float-start d-block" style="margin-top:25px !important;">
+                            <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                            <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-1">
-                    <RadzenText>Order</RadzenText>
-                    <RadzenNumeric class="w-100" TValue=int? Min="1" @bind-Value="@model.SortOrder" />
-                </div>
-                <div class="col-md-1">
-                    <div class="float-start d-block" style="margin-top:30px !important;">
-                        <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
-                        <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="float-start d-block" style="margin-top:25px !important;">
-                        <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
-                        <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
-                    </div>
-                </div>
-            </div>
-        </RadzenTemplateForm>
-    </RadzenCard>
-
-    <RadzenCard class="mb-3">
+            </RadzenTemplateForm>
+        </RadzenCard>
         <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Pet Blood Chemistry Types Detail</RadzenText>
         <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@petBloodChemistryTypes" Count="@count" IsLoading="@IsDataGridLoading" TItem="PetBloodChemistryTypes" AllowFiltering="true" AllowColumnReBloodChemistryType="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageBloodChemistryType="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
             <Columns>
@@ -97,7 +95,7 @@
                 <RadzenDataGridColumn TItem="PetBloodChemistryTypes" Property="PetBloodChemsTypeID" Title="Action" Sortable="false" Filterable="false">
                     <Template Context="item">
                         <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.PetBloodChemsTypeID)) />
-                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium"  Icon="delete" Click=@(agrds => OnDelete(item.PetBloodChemsTypeID)) />
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="delete" Click=@(agrds => OnDelete(item.PetBloodChemsTypeID)) />
                     </Template>
                 </RadzenDataGridColumn>
             </Columns>

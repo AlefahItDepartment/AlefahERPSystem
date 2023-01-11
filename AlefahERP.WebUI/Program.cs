@@ -16,6 +16,7 @@ builder.Services.AddServerSideBlazor();
 //builder.Services.AddSingleton<WeatherForecastService>();
 
 builder.Services.AddDbContext<AlefahDbContext>(options => options.UseSqlServer(builder.Configuration["ConnectionStrings:ConStr"]));
+
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
@@ -36,6 +37,10 @@ builder.Services.AddSingleton<CustomAuthService>();
 builder.Services.AddScoped<AlefahDbContext>();
 IServiceCollection services = builder.Services;
 services.AddScopedServiceServices();
+services.AddServerSideBlazor().AddHubOptions(o =>
+{
+    o.MaximumReceiveMessageSize = 10 * 1024 * 1024;
+});
 builder.Services.AddScoped<NavigationService>();
 builder.Services.AddScoped<DialogService>();
 builder.Services.AddScoped<NotificationService>();
