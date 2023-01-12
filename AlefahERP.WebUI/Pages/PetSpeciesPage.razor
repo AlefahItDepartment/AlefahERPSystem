@@ -29,57 +29,59 @@
         </div>
     </div>
 
-    <RadzenCard Class="mb-3">
-        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
-        <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
-            @message
-        </RadzenAlert>
-        <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
-            @message
-        </RadzenAlert>
-        <RadzenTemplateForm TItem="PetSpecies" Data="@model" Submit="OnCreate">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <RadzenText>Name (Enlish) <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="PetSpeciesNameEN" @bind-Value="@model.PetSpeciesNameEN" />
-                        </div>
-                        <RadzenLengthValidator Component="PetSpeciesNameEN" Min="3" Text="Pet species name should be at least 5 characters" Popup=@popup Style="position:absolute" />
-                        <RadzenLengthValidator Component="PetSpeciesNameEN" Max="50" Text="Pet species name should be at most 50 characters" Popup=@popup Style="position:absolute" />
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <RadzenText>Name (Arabic) <span class="text-danger">*</span></RadzenText>
-                        <div class="input-group">
-                            <RadzenTextBox class="w-100" Name="PetSpeciesNameAR" @bind-Value="@model.PetSpeciesNameAR" />
-                        </div>
-                        <RadzenLengthValidator Component="PetSpeciesNameAR" Min="3" Text="Pet species name should be at least 10 characters" Popup=@popup Style="position:absolute" />
-                        <RadzenLengthValidator Component="PetSpeciesNameAR" Max="150" Text="Pet species name should be at most 150 characters" Popup=@popup Style="position:absolute" />
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <RadzenText>Order</RadzenText>
-                    <RadzenNumeric class="w-100" TValue=int? Min="1" @bind-Value="@model.SortOrder" />
-                </div>
-                <div class="col-md-1">
-                    <div class="float-start d-block" style="margin-top:30px !important;">
-                        <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
-                        <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="float-start d-block" style="margin-top:25px !important;">
-                        <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
-                        <RadzenButton Text="Reset" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Primary" Variant="Variant.Outlined" Shade="Shade.Lighter" />
-                    </div>
-                </div>
-            </div>
-        </RadzenTemplateForm>
-    </RadzenCard>
 
-    <RadzenCard class="mb-3">
+
+    <RadzenCard>
+        <RadzenCard Class="mb-3">
+            <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+            <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+                @message
+            </RadzenAlert>
+            <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+                @message
+            </RadzenAlert>
+            <RadzenTemplateForm TItem="PetSpecies" Data="@model" Submit="OnCreate">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <RadzenText>Name (Enlish) <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="PetSpeciesNameEN" @bind-Value="@model.PetSpeciesNameEN" />
+                            </div>
+                            <RadzenLengthValidator Component="PetSpeciesNameEN" Min="3" Text="Pet species name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="PetSpeciesNameEN" Max="50" Text="Pet species name should be at most 50 characters" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <RadzenText>Name (Arabic) <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="PetSpeciesNameAR" @bind-Value="@model.PetSpeciesNameAR" />
+                            </div>
+                            <RadzenLengthValidator Component="PetSpeciesNameAR" Min="3" Text="Pet species name should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="PetSpeciesNameAR" Max="150" Text="Pet species name should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <RadzenText>Order</RadzenText>
+                        <RadzenNumeric class="w-100" TValue=int? Min="1" @bind-Value="@model.SortOrder" />
+                    </div>
+                    <div class="col-md-1">
+                        <div class="float-start d-block" style="margin-top:30px !important;">
+                            <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
+                            <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="float-start d-block" style="margin-top:25px !important;">
+                            <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                            <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                        </div>
+                    </div>
+                </div>
+            </RadzenTemplateForm>
+        </RadzenCard>
+
         <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Species Detail</RadzenText>
         <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@petSpecies" Count="@count" IsLoading="@IsDataGridLoading" TItem="PetSpecies" AllowSorting="true" AllowFiltering="true" AllowPaging="true" PageSize="5" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
             <Columns>
@@ -97,7 +99,7 @@
                 <RadzenDataGridColumn TItem="PetSpecies" Property="PetSpeciesID" Title="Action" Sortable="false" Filterable="false">
                     <Template Context="item">
                         <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="edit" Class="me-1" Click="@(async args => await DialogService.OpenSideAsync<PetSpeciesEditPage>("Side Panel",new Dictionary<string, object>() { { "PetSpeciesID", item.PetSpeciesID  } }, options: new SideDialogOptions { CloseDialogOnOverlayClick = true }))" />
-                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium"  Icon="delete" Click=@(agrds => OnDelete(item.PetSpeciesID)) />
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="delete" Click=@(agrds => OnDelete(item.PetSpeciesID)) />
                     </Template>
                 </RadzenDataGridColumn>
             </Columns>

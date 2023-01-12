@@ -16,8 +16,8 @@ namespace AlefahERP.DTO
         //[Precision(18, 2)]
         public double? High { get; set; }
         //[Precision(18, 2)]
-       // public decimal? EH { get; set; }
-        [Precision(18, 2)]
+        public decimal? EH { get; set; }
+        //[Precision(18, 2)]
         public double? Panting { get; set; }
 
     }

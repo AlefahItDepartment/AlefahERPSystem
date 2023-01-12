@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlefahERP.Services", "Alefa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlefahERP.Common", "AlefahERP.Common\AlefahERP.Common.csproj", "{9ABFEA06-9900-4566-9D8C-ED594B3680AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlefahERP.WebUI", "AlefahERP.WebUI\AlefahERP.WebUI.csproj", "{85992772-5306-4830-BF84-5E0459D67783}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlefahERP.WebUI", "AlefahERP.WebUI\AlefahERP.WebUI.csproj", "{85992772-5306-4830-BF84-5E0459D67783}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

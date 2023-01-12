@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace AlefahERP.Repository
 {
-    public class AlefahDbContext:DbContext
+    public class AlefahDbContext : DbContext
     {
 
-        public AlefahDbContext(DbContextOptions<AlefahDbContext> options):base(options)
+        public AlefahDbContext(DbContextOptions<AlefahDbContext> options) : base(options)
         {
 
         }
@@ -75,6 +75,12 @@ namespace AlefahERP.Repository
         public DbSet<PetSpecies> PetSpecies { get; set; }
         public DbSet<PetSubSpecies> PetSubSpecies { get; set; }
         public DbSet<_ApointmentsCounter> _ApointmentsCounter { get; set; }
+        public DbSet<Employees1> Employees1 { get; set; }
+        public DbSet<EmployeesPictures> EmployeesPictures { get; set; }
+        public DbSet<EmployeesAddress> EmployeesAddress { get; set; }
+        public DbSet<EmployeesEmployments> EmployeesEmployments { get; set; }
+        public DbSet<EmployeesHealthInsuranceDetails> EmployeesHealthInsuranceDetails { get; set; }
+        public DbSet<EmployeesAttachments> EmployeesAttachments { get; set; }
 
     }
 }
