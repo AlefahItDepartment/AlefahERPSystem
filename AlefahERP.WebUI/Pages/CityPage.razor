@@ -42,7 +42,7 @@
                         <div class="form-group">
                             <RadzenText>Country <span class="text-danger">*</span></RadzenText>
                             <div class="input-group">
-                                <RadzenDropDown @bind-Value="@model.CountryID" TextProperty="CountryName" ValueProperty="CountryID" Data="@countries" class="w-100" Change=@(args => OnRegionList(args))>
+                                <RadzenDropDown Name="CountryID" @bind-Value="@model.CountryID" TextProperty="CountryName" ValueProperty="CountryID" Data="@countries" class="w-100" Change=@(args => OnRegionList(args))>
 
                                 </RadzenDropDown>
                             </div>
@@ -53,7 +53,7 @@
                         <div class="form-group">
                             <RadzenText>Region <span class="text-danger">*</span></RadzenText>
                             <div class="input-group">
-                                <RadzenDropDown @bind-Value="@model.RegionID" TextProperty="RegionName" ValueProperty="RegionID" Data="@regions" class="w-100">
+                                <RadzenDropDown Name="RegionID" @bind-Value="@model.RegionID" TextProperty="RegionName" ValueProperty="RegionID" Data="@regions" class="w-100">
 
                                 </RadzenDropDown>
                             </div>

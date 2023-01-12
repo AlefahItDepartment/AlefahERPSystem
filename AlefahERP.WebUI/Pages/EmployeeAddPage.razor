@@ -106,7 +106,7 @@
                         </div>
                     </div>
                 </RadzenStepsItem>
-                <RadzenStepsItem Text="Employement Detail">
+                <RadzenStepsItem Text="Employment Detail">
                     <div class="row">
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Site</RadzenLabel>
@@ -143,8 +143,8 @@
                             <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="HiringDate" class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
-                            <RadzenLabel>Employement Date</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="EmployementDate" class="w-100" />
+                            <RadzenLabel>Employment Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="EmploymentDate" class="w-100" />
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Contract Type</RadzenLabel>
@@ -160,8 +160,8 @@
                             <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="ContractEndDate" class="w-100" />
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
-                            <RadzenLabel>Employement Status</RadzenLabel>
-                            <RadzenDropDown Name="EmployementStatus" TValue="string" class="w-100">
+                            <RadzenLabel>Employment Status</RadzenLabel>
+                            <RadzenDropDown Name="EmploymentStatus" TValue="string" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
@@ -177,6 +177,16 @@
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Insurance Date</RadzenLabel>
                             <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="InsuranceDate" class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Report To</RadzenLabel>
+                            <RadzenDropDown Name="ReportToEmployeeID" TValue="string" class="w-100">
+                            </RadzenDropDown>
+                        </div>
+                        <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>User Role</RadzenLabel>
+                            <RadzenDropDown Name="UserRoleID" TValue="string" class="w-100">
+                            </RadzenDropDown>
                         </div>
                     </div>
                 </RadzenStepsItem>
@@ -290,11 +300,14 @@
                                 <RadzenFileInput TValue="string"></RadzenFileInput>
                             </RadzenCard>
                         </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 px-3 mb-3">
+                            <RadzenCard>
+                                <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Other</RadzenText>
+                                <RadzenFileInput TValue="string"></RadzenFileInput>
+                            </RadzenCard>
+                        </div>
                     </div>
-                </RadzenStepsItem>
-                <RadzenStepsItem Text="User Role">
-
-                </RadzenStepsItem>
+                </RadzenStepsItem>               
                 <RadzenStepsItem Text="Finish"></RadzenStepsItem>
             </Steps>
         </RadzenSteps>

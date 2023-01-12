@@ -48,6 +48,12 @@ namespace AlefahERP.Repository
             services.AddScoped<IEmployeesRepository, EmployeesRepository>();
             services.AddScoped<IUserRoleRepository, UserRoleRepository>();
             services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddScoped<IEmployees1Repository, Employees1Repository>();
+            services.AddScoped<IEmployeesPicturesRepository, EmployeesPicturesRepository>();
+            services.AddScoped<IEmployeesAddressRepository, EmployeesAddressRepository>();
+            services.AddScoped<IEmployeesEmploymentsRepository, EmployeesEmploymentsRepository>();
+            services.AddScoped<IEmployeesHealthInsuranceDetailsRepository, EmployeesHealthInsuranceDetailsRepository>();
+            services.AddScoped<IEmployeesAttachmentsRepository, EmployeesAttachmentsRepository>();
         }
     }
 }

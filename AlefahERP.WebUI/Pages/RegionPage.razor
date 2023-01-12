@@ -43,9 +43,9 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <RadzenText>Region Code <span class="text-danger">*</span></RadzenText>
+                            <RadzenText>Country <span class="text-danger">*</span></RadzenText>
                             <div class="input-group">
-                                <RadzenDropDown @bind-Value="@model.CountryID" TextProperty="CountryName" ValueProperty="CountryID" Data="@countries" class="w-100">
+                                <RadzenDropDown Name="CountryID" @bind-Value="@model.CountryID" TextProperty="CountryName" ValueProperty="CountryID" Data="@countries" class="w-100">
 
                                 </RadzenDropDown>
                             </div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <RadzenText>Region Code <span class="text-danger">*</span></RadzenText>
+                            <RadzenText>Region Name <span class="text-danger">*</span></RadzenText>
                             <div class="input-group">
                                 <RadzenTextBox class="w-100" Name="RegionName" @bind-Value="@model.RegionName" />
                             </div>
