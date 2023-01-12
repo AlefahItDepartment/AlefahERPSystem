@@ -26,18 +26,18 @@
     </RadzenHeader>
     <RadzenSidebar @ref="@sidebar0" @bind-Expanded="@sidebarExpanded" class="demos-sidebar" style="display: flex; flex-direction: column">
 
-        <RadzenHeader>
-            <RadzenLabel Text="ALEFAH ERP" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;padding: 1rem">
-            </RadzenLabel>
-        </RadzenHeader>
-
-
-        <div style="padding: 1rem">
-            <RadzenTextBox Placeholder="Find page ..." type="search" @oninput="@FilterPanelMenu" style="width: 100%" />
-        </div>
         <div style="flex: 1; overflow: auto">
             <RadzenPanelMenu Match="NavLinkMatch.Prefix">
-
+                <RadzenLabel Style="width:100%">
+                    <div class="d-flex" style="padding: 1rem;">
+                        <h5><span>ALEFAH</span> <span class="rz-light">ERP</span></h5>
+                    </div>
+                </RadzenLabel>
+                <RadzenLabel Style="width:100%">
+                    <div style="padding: 1rem">
+                        <RadzenTextBox Placeholder="Find page ..." type="search" @oninput="@FilterPanelMenu" style="width: 100%" />
+                    </div>
+                </RadzenLabel>
                 @foreach (var category in navigations)
                 {
                     <NavigationItem @bind-Expanded=@category.Expanded Navigation=@category>

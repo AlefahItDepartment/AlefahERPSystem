@@ -1,0 +1,309 @@
+﻿@page "/bookingstatus"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@using System.Linq.Dynamic.Core
+@inject IUnitOfWork unitofWork
+@inject DialogService DialogService
+@implements IDisposable
+@attribute [Authorize(Roles = "Admin, Customer")]
+
+<div class="container-fluid">
+
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <RadzenText TextStyle="TextStyle.DisplayH4" TagName="TagName.H4" Text="Booking Status" />
+        </div>
+        <div class="col-lg-6">
+            <div class="d-block justify-content-end">
+                <RadzenBreadCrumb Class="rz-text-align-end">
+                    <Template Context="item">
+                        <RadzenBadge Text="@item.Text" IsPill="true" />
+                    </Template>
+                    <ChildContent>
+                        <RadzenBreadCrumbItem Text="Setup" />
+                        <RadzenBreadCrumbItem Icon="add" Text="Booking Status" />
+                    </ChildContent>
+                </RadzenBreadCrumb>
+            </div>
+        </div>
+    </div>
+    <RadzenCard>
+        <RadzenCard Class="mb-3">
+            <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+            <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+                @message
+            </RadzenAlert>
+            <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+                @message
+            </RadzenAlert>
+            <RadzenTemplateForm TItem="BookingStatus" Data="@model" Submit="OnCreate">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <RadzenText>Name (Enlish) <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="BookingStatusNameEN" @bind-Value="@model.BookingStatusNameEN" />
+                            </div>
+                            <RadzenLengthValidator Component="BookingStatusNameEN" Min="3" Text="Booking status name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="BookingStatusNameEN" Max="50" Text="Booking status name should be at most 50 characters" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <RadzenText>Name (Arabic) <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="BookingStatusNameAR" @bind-Value="@model.BookingStatusNameAR" />
+                            </div>
+                            <RadzenLengthValidator Component="BookingStatusNameAR" Min="3" Text="Booking status name should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="BookingStatusNameAR" Max="150" Text="Booking status name should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="float-start d-block" style="margin-top:30px !important;">
+                            <RadzenCheckBox @bind-Value=@model.IsActive Name="IsActive" TValue="bool?" />
+                            <RadzenLabel Text="Is Active" Component="IsActive" Style="margin-left: 8px; vertical-align: middle;min-height:0 !important;padding:0 !important" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="float-start d-block" style="margin-top:25px !important;">
+                            <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                            <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                        </div>
+                    </div>
+                </div>
+            </RadzenTemplateForm>
+        </RadzenCard>
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Species Detail</RadzenText>
+        <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@petSpecies" Count="@count" IsLoading="@IsDataGridLoading" TItem="BookingStatus" AllowSorting="true" AllowFiltering="true" AllowPaging="true" PageSize="5" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+            <Columns>
+                <RadzenDataGridColumn TItem="BookingStatus" Property="BookingStatusNameEN" Title="Booking Status (En)" Frozen="true">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="BookingStatus" Property="BookingStatusNameAR" Title="Booking Status (Ar)" />
+                <RadzenDataGridColumn TItem="BookingStatus" Property="IsActive" Title="Status">
+                    <Template Context="item">
+                        <span class="rz-badge rz-shade-lighter @(item.IsActive.HasValue? (item.IsActive == true ? "rz-badge-success": "rz-badge-danger") :"rz-badge-danger")">
+                            @(item.IsActive.HasValue ? (item.IsActive == true ? "Active" : "Inactive") : "Inactive")
+                        </span>
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="BookingStatus" Property="BookingStatusID" Title="Action" Sortable="false" Filterable="false">
+                    <Template Context="item">
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="edit" Class="me-1" Click="@(async args => await DialogService.OpenSideAsync<BookingStatusEditPage>("Side Panel",new Dictionary<string, object>() { { "BookingStatusID", item.BookingStatusID  } }, options: new SideDialogOptions { CloseDialogOnOverlayClick = true }))" />
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="delete" Click=@(agrds => OnDelete(item.BookingStatusID)) />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</div>
+
+
+
+
+@code {
+
+    bool checkBox1Value = true;
+    BookingStatus model = new BookingStatus();
+    List<BookingStatus> petSpecies = new List<BookingStatus>();
+    RadzenDataGrid<BookingStatus>? grid;
+    bool IsDataGridLoading = false;
+    int count = 0;
+    string? message;
+    bool popup = true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        DialogService.OnOpen += Open;
+        DialogService.OnClose += Close;
+
+        await PreGridLoadData();
+    }
+    public void Dispose()
+    {
+        DialogService.OnOpen -= Open;
+        DialogService.OnClose -= Close;
+    }
+
+    async Task GridLoadData(LoadDataArgs args)
+    {
+
+        await PreGridLoadData(args);
+    }
+
+    async Task PreGridLoadData(LoadDataArgs? args = null)
+    {
+
+        IsDataGridLoading = true;
+
+
+        await Task.Yield();
+
+        IQueryable<BookingStatus> query = this.unitofWork.Setup.BookingStatus.GetAll();
+
+        if (args != null)
+        {
+            if (!string.IsNullOrEmpty(args.Filter))
+            {
+
+                query = query.Where(args.Filter);
+            }
+
+            if (!string.IsNullOrEmpty(args.OrderBy))
+            {
+                query = query.OrderBy(args.OrderBy);
+            }
+            else
+            {
+                query = query.OrderByDescending(o => o.BookingStatusID);
+            }
+        }
+        else
+        {
+
+            query = query.OrderByDescending(o => o.BookingStatusID);
+        }
+
+        count = query.Count();
+
+        if (args == null)
+        {
+            query = query.Skip(0).Take(5);
+        }
+        else
+        {
+            query = query.Skip(args.Skip.Value).Take(args.Top.Value);
+        }
+
+        petSpecies = query.ToList();
+
+        IsDataGridLoading = false;
+    }
+
+    async Task OnCreate()
+    {
+        try
+        {
+            await Task.Yield();
+
+            IsBusy = true;
+            if (model != null)
+            {
+                var results = await this.unitofWork.Setup.BookingStatus.Add(model);
+
+                if (results != null)
+                {
+                    if (results.status)
+                    {
+                        showSuccessMessage = true;
+                        showErrorMessage = false;
+
+                        message = results.message;
+
+                        model = new BookingStatus();
+
+                        if (grid != null)
+                            await grid.Reload();
+                    }
+
+
+                }
+                else
+                {
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                    message = "An error occured";
+                }
+            }
+            else
+            {
+                showSuccessMessage = false;
+                showErrorMessage = true;
+                message = "An error occured";
+            }
+        }
+        catch (Exception ex)
+        {
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            message = ex.Message;
+            throw ex;
+
+        }
+        finally
+        {
+            showSuccessMessage = false;
+            showErrorMessage = false;
+            IsBusy = false;
+        }
+    }
+
+
+    async Task OnDelete(int BookingStatusID)
+    {
+        try
+        {
+
+            var confirm = await DialogService.Confirm("Are you sure!, You want to delete this record.", "Confirm", new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" });
+
+            if (confirm.HasValue)
+            {
+
+                if (confirm.Value)
+                {
+
+                    var result = await this.unitofWork.Setup.BookingStatus.Delete(BookingStatusID);
+                    if (result != null)
+                    {
+                        if (result.status)
+                        {
+                            model = new BookingStatus();
+
+                            if (grid != null)
+                                await grid.Reload();
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+        finally
+        {
+
+        }
+    }
+
+
+    async Task OnOpenDialog(int BookingStatusID)
+    {
+
+        await DialogService.OpenSideAsync<BookingStatusEditPage>($"Edit Booking Status",
+               new Dictionary<string, object>() { { "BookingStatusID", BookingStatusID } },
+               new SideDialogOptions { CloseDialogOnOverlayClick = false, Position = DialogPosition.Right, ShowMask = false });
+
+
+    }
+
+    void Open(string title, Type type, Dictionary<string, object> parameters, DialogOptions options)
+    {
+        //console.Log("Dialog opened");
+    }
+
+    void Close(dynamic result)
+    {
+
+    }
+
+
+
+}
