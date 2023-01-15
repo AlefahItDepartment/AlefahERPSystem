@@ -33,14 +33,19 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("HRDepartmentOnly", policy => policy.RequireRole("HRDepartment"));
     options.AddPolicy("GuestOnly", policy => policy.RequireRole("Guest"));
 });
+
 builder.Services.AddSingleton<CustomAuthService>();
+
+
 builder.Services.AddScoped<AlefahDbContext>();
 IServiceCollection services = builder.Services;
 services.AddScopedServiceServices();
+
 services.AddServerSideBlazor().AddHubOptions(o =>
 {
     o.MaximumReceiveMessageSize = 10 * 1024 * 1024;
 });
+builder.Services.AddScoped<SessionUserService>();
 builder.Services.AddScoped<NavigationService>();
 builder.Services.AddScoped<DialogService>();
 builder.Services.AddScoped<NotificationService>();

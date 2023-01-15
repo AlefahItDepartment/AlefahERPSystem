@@ -23,14 +23,14 @@
                 {
                     new Navigation {
 
-                        Name="Menu10",
-                        Path="/Menu10"
+                        Name="Appointments",
+                        Path="/appointments"
 
                     },
                     new Navigation {
 
-                        Name="Menu11",
-                        Path="/Menu11"
+                        Name="Schedules",
+                        Path="/schedules"
 
                     }
 

@@ -1,0 +1,33 @@
+﻿@page "/appointmentassign/{BookingHeadID}"
+@using AlefahERP.DTO;
+@using AlefahERP.Services
+@inject IUnitOfWork unitofWork
+
+
+
+
+@*<RadzenScheduler>
+    <RadzenDayView>
+
+    </RadzenDayView>
+</RadzenScheduler>*@
+@code {
+
+
+    [Parameter]
+    public int BookingHeadID { get; set; }
+
+    viewBookingHead bookingHead;
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        bookingHead = this.unitofWork.Booking.BookingHead.GetAll(x => x.BookingHeadID == BookingHeadID).FirstOrDefault();
+
+
+
+
+    }
+}

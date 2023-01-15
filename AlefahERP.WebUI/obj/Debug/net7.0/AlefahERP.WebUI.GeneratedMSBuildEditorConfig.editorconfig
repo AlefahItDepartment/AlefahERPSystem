@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/AppointmentAssign.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwb2ludG1lbnRBc3NpZ24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/Appointments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwb2ludG1lbnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/BookingStatusEditPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1N0YXR1c0VkaXRQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
