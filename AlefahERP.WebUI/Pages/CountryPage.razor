@@ -1,0 +1,296 @@
+﻿@page "/country"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@using System.Linq.Dynamic.Core
+@inject IUnitOfWork unitofWork
+@inject DialogService DialogService
+@implements IDisposable
+@attribute [Authorize(Roles = "Admin, Customer")]
+
+<div class="container-fluid">
+
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <RadzenText TextStyle="TextStyle.DisplayH4" TagName="TagName.H4" Text="Country" />
+        </div>
+        <div class="col-lg-6">
+            <div class="d-block justify-content-end">
+                <RadzenBreadCrumb Class="rz-text-align-end">
+                    <Template Context="item">
+                        <RadzenBadge Text="@item.Text" IsPill="true" />
+                    </Template>
+                    <ChildContent>
+                        <RadzenBreadCrumbItem Text="Setup" />
+                        <RadzenBreadCrumbItem Icon="add" Text="Country" />
+                    </ChildContent>
+                </RadzenBreadCrumb>
+            </div>
+        </div>
+    </div>
+    <RadzenCard>
+        <RadzenCard Class="mb-3">
+            <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Information</RadzenText>
+            <RadzenAlert AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showErrorMessage>
+                @message
+            </RadzenAlert>
+            <RadzenAlert AlertStyle="AlertStyle.Success" Variant="Variant.Flat" Shade="Shade.Lighter" Visible=@showSuccessMessage>
+                @message
+            </RadzenAlert>
+            <RadzenTemplateForm TItem="Country" Data="@model" Submit="OnCreate">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <RadzenText>Country Name <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="CountryName" @bind-Value="@model.CountryName" />
+                            </div>
+                            <RadzenLengthValidator Component="CountryName" Min="3" Text="Country name should be at least 5 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="CountryName" Max="50" Text="Country name should be at most 50 characters" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <RadzenText>Country Code <span class="text-danger">*</span></RadzenText>
+                            <div class="input-group">
+                                <RadzenTextBox class="w-100" Name="CountryCode" @bind-Value="@model.CountryCode" />
+                            </div>
+                            <RadzenLengthValidator Component="CountryCode" Min="3" Text="Country code should be at least 10 characters" Popup=@popup Style="position:absolute" />
+                            <RadzenLengthValidator Component="CountryCode" Max="150" Text="Country code should be at most 150 characters" Popup=@popup Style="position:absolute" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="float-start d-block" style="margin-top:25px !important;">
+                            <RadzenButton Text="Add" ButtonType="ButtonType.Submit" IsBusy="@IsBusy" Disabled=@IsBusy BusyText="Add..." />
+                            <RadzenButton Text="Cancel" ButtonType="ButtonType.Reset" Disabled=@IsBusy ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" />
+                        </div>
+                    </div>
+                </div>
+            </RadzenTemplateForm>
+        </RadzenCard>
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Country Detail</RadzenText>
+        <RadzenDataGrid @ref="grid" LoadData="@GridLoadData" Data="@Country" Count="@count" IsLoading="@IsDataGridLoading" TItem="Country" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+            <Columns>
+                <RadzenDataGridColumn TItem="Country" Property="CountryName" Title="Country Name" Frozen="true">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="Country" Property="CountryCode" Title="Country Code" />
+                <RadzenDataGridColumn TItem="Country" Property="CountryID" Title="Action" Sortable="false" Filterable="false">
+                    <Template Context="item">
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.CountryID)) />
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="delete" Click=@(agrds => OnDelete(item.CountryID)) />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</div>
+
+
+
+
+@code {
+
+    bool checkBox1Value = true;
+    Country model = new Country();
+    List<Country> Country = new List<Country>();
+    RadzenDataGrid<Country>? grid;
+    bool IsDataGridLoading = false;
+    int count = 0;
+    string? message;
+    bool popup = true;
+    bool IsBusy;
+    bool showSuccessMessage;
+    bool showErrorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        DialogService.OnOpen += Open;
+        DialogService.OnClose += Close;
+
+        await PreGridLoadData();
+    }
+    public void Dispose()
+    {
+        DialogService.OnOpen -= Open;
+        DialogService.OnClose -= Close;
+    }
+
+    async Task GridLoadData(LoadDataArgs args)
+    {
+
+        await PreGridLoadData(args);
+    }
+
+    async Task PreGridLoadData(LoadDataArgs? args = null)
+    {
+
+        IsDataGridLoading = true;
+
+
+        await Task.Yield();
+
+        IQueryable<Country> query = this.unitofWork.Setup.Country.GetAll();
+
+        if (args != null)
+        {
+            if (!string.IsNullOrEmpty(args.Filter))
+            {
+
+                query = query.Where(args.Filter);
+            }
+
+            if (!string.IsNullOrEmpty(args.OrderBy))
+            {
+                query = query.OrderBy(args.OrderBy);
+            }
+            else
+            {
+                query = query.OrderByDescending(o => o.CountryID);
+            }
+        }
+        else
+        {
+
+            query = query.OrderByDescending(o => o.CountryID);
+        }
+
+        count = query.Count();
+
+        if (args == null)
+        {
+            query = query.Skip(0).Take(5);
+        }
+        else
+        {
+            query = query.Skip(args.Skip.Value).Take(args.Top.Value);
+        }
+
+        Country = query.ToList();
+
+        IsDataGridLoading = false;
+    }
+
+    async Task OnCreate()
+    {
+        try
+        {
+            await Task.Yield();
+
+            IsBusy = true;
+            if (model != null)
+            {
+                var results = await this.unitofWork.Setup.Country.Add(model);
+
+                if (results != null)
+                {
+                    if (results.status)
+                    {
+                        showSuccessMessage = true;
+                        showErrorMessage = false;
+
+                        message = results.message;
+
+                        model = new Country();
+
+                        if (grid != null)
+                            await grid.Reload();
+                    }
+
+
+                }
+                else
+                {
+                    showSuccessMessage = false;
+                    showErrorMessage = true;
+                    message = "An error occured";
+                }
+            }
+            else
+            {
+                showSuccessMessage = false;
+                showErrorMessage = true;
+                message = "An error occured";
+            }
+        }
+        catch (Exception ex)
+        {
+            showSuccessMessage = false;
+            showErrorMessage = true;
+            message = ex.Message;
+            throw ex;
+
+        }
+        finally
+        {
+            showSuccessMessage = false;
+            showErrorMessage = false;
+            IsBusy = false;
+        }
+    }
+
+
+    async Task OnDelete(int CountryID)
+    {
+        try
+        {
+
+            var confirm = await DialogService.Confirm("Are you sure!, You want to delete this record.", "Confirm", new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" });
+
+            if (confirm.HasValue)
+            {
+
+                if (confirm.Value)
+                {
+
+                    var result = await this.unitofWork.Setup.Country.Delete(CountryID);
+                    if (result != null)
+                    {
+                        if (result.status)
+                        {
+                            model = new Country();
+
+                            if (grid != null)
+                                await grid.Reload();
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+        finally
+        {
+
+        }
+    }
+
+
+    async Task OnOpenDialog(int CountryID)
+    {
+
+        await DialogService.OpenSideAsync<CountryEditPage>($"Edit Country",
+               new Dictionary<string, object>() { { "CountryID", CountryID } },
+               new SideDialogOptions() { Position = DialogPosition.Right });
+
+
+    }
+
+    void Open(string title, Type type, Dictionary<string, object> parameters, DialogOptions options)
+    {
+        //console.Log("Dialog opened");
+    }
+
+    void Close(dynamic result)
+    {
+
+    }
+
+
+
+}

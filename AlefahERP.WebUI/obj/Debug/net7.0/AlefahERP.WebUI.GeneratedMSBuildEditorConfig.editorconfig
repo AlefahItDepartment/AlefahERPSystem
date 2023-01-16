@@ -20,8 +20,32 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/BookingStatusEditPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1N0YXR1c0VkaXRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/BookingStatusPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ1N0YXR1c1BhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/CityEditPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2l0eUVkaXRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/CityPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2l0eVBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/CountryEditPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyeUVkaXRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/CountryPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRyeVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/DepartmentEditPage.razor]
@@ -38,6 +62,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/DesignationPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVzaWduYXRpb25QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/EmployeeAddPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVBZGRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/EmployeesDetailPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVzRGV0YWlsUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/Index.razor]
@@ -142,6 +174,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetSubSpeciesPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0U3ViU3BlY2llc1BhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/RegionEditPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uRWRpdFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/RegionPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaW9uUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Shared/LoginLayout.razor]
