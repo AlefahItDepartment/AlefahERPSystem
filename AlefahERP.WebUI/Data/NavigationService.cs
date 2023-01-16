@@ -46,7 +46,7 @@
                 {
                     new Navigation {
 
-                        Name="Add Employee",
+                        Name="Employee Add",
                         Path="/employeeadd"
 
                     },

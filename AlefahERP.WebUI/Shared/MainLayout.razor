@@ -29,7 +29,7 @@
                 <RadzenMenu class="me-3">
                     <RadzenMenuItem Text=@(sessionUser.User.FullName) Icon="perm_identity">
                         <RadzenMenuItem Text="My Profile" Path="profile" Icon="account_circle"></RadzenMenuItem>
-                        <RadzenMenuItem Text="Logout" Click=@(args => OnLogout(args)) Icon="logout"></RadzenMenuItem>
+                        <RadzenMenuItem Text="Logout" Path="Logout" Icon="logout"></RadzenMenuItem>
                     </RadzenMenuItem>
                 </RadzenMenu>
             </div>
@@ -111,6 +111,7 @@
     bool bodyExpanded = false;
     bool rendered;
 
+
     IEnumerable<Navigation> navigations;
     protected override void OnInitialized()
     {
@@ -143,13 +144,4 @@
         //UriHelper.NavigateTo(url, true);
     }
 
-    async Task OnLogout(object sender)
-    {
-
-        //await SigninManger.SignOutAsync();
-
-
-        UriHelper.NavigateTo("/");
-
-    }
 }
