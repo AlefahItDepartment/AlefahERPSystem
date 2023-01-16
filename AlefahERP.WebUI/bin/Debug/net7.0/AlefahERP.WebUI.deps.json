@@ -627,6 +627,9 @@
         }
       },
       "AlefahERP.Common/1.0.0": {
+        "dependencies": {
+          "AlefahERP.DTO": "1.0.0"
+        },
         "runtime": {
           "AlefahERP.Common.dll": {}
         }

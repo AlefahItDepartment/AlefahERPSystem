@@ -2,7 +2,7 @@
 @using System.Linq.Dynamic.Core
 @inject DialogService DialogService
 @implements IDisposable
-@attribute [Authorize(Roles = "Admin, Customer")]
+@attribute [Authorize]
 <div class="container-fluid">
     <div class="row mb-5">
         <div class="col-lg-6">
@@ -69,6 +69,7 @@
                             <RadzenLabel>National/Iqama ID</RadzenLabel>
                             <RadzenTextBox Name="IDNumber" class="w-100" />
                         </div>
+
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Expiry Date</RadzenLabel>
                             <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="IDExpiry" class="w-100" />
@@ -76,11 +77,21 @@
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Passport No</RadzenLabel>
                             <RadzenTextBox Name="PassportNo" class="w-100" />
+                        </div>                     
+
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>IBAN</RadzenLabel>
+                            <RadzenTextBox TValue="string" Name="IBAN" class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
-                            <RadzenLabel>Expiry Date</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="PassportExpiry" class="w-100" />
+                            <RadzenLabel>Account No.</RadzenLabel>
+                            <RadzenTextBox Name="AccountNumber" class="w-100" />
                         </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Bank Name</RadzenLabel>
+                            <RadzenTextBox Name="BankName" class="w-100" />
+                        </div>
+
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Mobile</RadzenLabel>
                             <RadzenTextBox Name="Mobile" class="w-100" />
@@ -318,6 +329,8 @@
     string photo;
     string fileName;
     long? fileSize;
+
+
 
     void OnChange(string value, string name)
     {

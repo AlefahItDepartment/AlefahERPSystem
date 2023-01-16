@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AlefahERP.DTO\AlefahERP.DTO.csproj" />
+  </ItemGroup>
+
 </Project>

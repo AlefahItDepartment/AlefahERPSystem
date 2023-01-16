@@ -4,6 +4,7 @@ using AlefahERP.WebUI.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Radzen;
 using Radzen.Blazor;
@@ -34,6 +35,7 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("GuestOnly", policy => policy.RequireRole("Guest"));
 });
 
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<CustomAuthService>();
 
 

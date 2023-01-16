@@ -88,38 +88,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBloodChemistryDetailsEditPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Qmxvb2RDaGVtaXN0cnlEZXRhaWxzRWRpdFBhZ2UucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBloodChemistryDetailsPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Qmxvb2RDaGVtaXN0cnlEZXRhaWxzUGFnZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBloodChemistryTypesEditPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Qmxvb2RDaGVtaXN0cnlUeXBlc0VkaXRQYWdlLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBloodChemistryTypesPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Qmxvb2RDaGVtaXN0cnlUeXBlc1BhZ2UucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBloodScreenDetailsEditPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Qmxvb2RTY3JlZW5EZXRhaWxzRWRpdFBhZ2UucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBloodScreenDetailsPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Qmxvb2RTY3JlZW5EZXRhaWxzUGFnZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBloodScreenTypesEditPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Qmxvb2RTY3JlZW5UeXBlc0VkaXRQYWdlLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBloodScreenTypesPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Qmxvb2RTY3JlZW5UeXBlc1BhZ2UucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetBreedsEditPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0QnJlZWRzRWRpdFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -136,30 +104,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0Q29sb3JzUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetExamineDetailsEditPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0RXhhbWluZURldGFpbHNFZGl0UGFnZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetExamineDetailsPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0RXhhbWluZURldGFpbHNQYWdlLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetExamineTypesEditPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0RXhhbWluZVR5cGVzRWRpdFBhZ2UucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetExamineTypesPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0RXhhbWluZVR5cGVzUGFnZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetOriginsEditPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0T3JpZ2luc0VkaXRQYWdlLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetOriginsPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0T3JpZ2luc1BhZ2UucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetSizesEditPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0U2l6ZXNFZGl0UGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -174,14 +118,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetSpeciesPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0U3BlY2llc1BhZ2UucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetSubSpeciesEditPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0U3ViU3BlY2llc0VkaXRQYWdlLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/PetSubSpeciesPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGV0U3ViU3BlY2llc1BhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ALEFAHERP_GIT/AlefahERP/AlefahERP.WebUI/Pages/RegionEditPage.razor]

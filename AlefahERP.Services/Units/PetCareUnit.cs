@@ -18,28 +18,28 @@ namespace AlefahERP.Services.Units
 
         }
 
-        public IPetBloodChemistryDetailsService PetBloodChemistryDetails => _serviceProvider.GetRequiredService<IPetBloodChemistryDetailsService>();
+        //public IPetBloodChemistryDetailsService PetBloodChemistryDetails => _serviceProvider.GetRequiredService<IPetBloodChemistryDetailsService>();
 
-        public IPetBloodChemistryTypesService PetBloodChemistryTypes => _serviceProvider.GetRequiredService<IPetBloodChemistryTypesService>();
+        //public IPetBloodChemistryTypesService PetBloodChemistryTypes => _serviceProvider.GetRequiredService<IPetBloodChemistryTypesService>();
 
-        public IPetBloodScreenDetailsService PetBloodScreenDetails => _serviceProvider.GetRequiredService<IPetBloodScreenDetailsService>();
+        //public IPetBloodScreenDetailsService PetBloodScreenDetails => _serviceProvider.GetRequiredService<IPetBloodScreenDetailsService>();
 
-        public IPetBloodScreenTypesService PetBloodScreenTypes => _serviceProvider.GetRequiredService<IPetBloodScreenTypesService>();
+        //public IPetBloodScreenTypesService PetBloodScreenTypes => _serviceProvider.GetRequiredService<IPetBloodScreenTypesService>();
 
         public IPetBreedsService PetBreeds => _serviceProvider.GetRequiredService<IPetBreedsService>();
 
         public IPetColorsService PetColors => _serviceProvider.GetRequiredService<IPetColorsService>();
 
-        public IPetExamineDetailsService PetExamineDetails => _serviceProvider.GetRequiredService<IPetExamineDetailsService>();
+        //public IPetExamineDetailsService PetExamineDetails => _serviceProvider.GetRequiredService<IPetExamineDetailsService>();
 
-        public IPetExamineTypesService PetExamineTypes => _serviceProvider.GetRequiredService<IPetExamineTypesService>();
+        //public IPetExamineTypesService PetExamineTypes => _serviceProvider.GetRequiredService<IPetExamineTypesService>();
 
-        public IPetOriginsService PetOrigins => _serviceProvider.GetRequiredService<IPetOriginsService>();
+        //public IPetOriginsService PetOrigins => _serviceProvider.GetRequiredService<IPetOriginsService>();
 
         public IPetSizesService PetSizes => _serviceProvider.GetRequiredService<IPetSizesService>();
 
         public IPetSpeciesService PetSpecies => _serviceProvider.GetRequiredService<IPetSpeciesService>();
 
-        public IPetSubSpeciesService PetSubSpecies => _serviceProvider.GetRequiredService<IPetSubSpeciesService>();
+        //public IPetSpeciesService PetSpecies => _serviceProvider.GetRequiredService<IPetSpeciesService>();
     }
 }

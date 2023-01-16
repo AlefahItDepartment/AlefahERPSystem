@@ -6,7 +6,7 @@ namespace AlefahERP.DTO
     {
         [Key]
         public int PetBreedID { get; set; }
-        public int PetSubSpeciesID { get; set; }
+        public int PetSpeciesID { get; set; }
         public string PetBreedNameEN { get; set; }
         public string? PetBreedNameAR { get; set; }
         public bool? IsActive { get; set; }

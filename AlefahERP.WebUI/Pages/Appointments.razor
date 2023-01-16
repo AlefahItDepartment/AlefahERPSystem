@@ -9,7 +9,7 @@
 @inject IUnitOfWork unitofWork
 @inject DialogService DialogService
 @implements IDisposable
-@attribute [Authorize(Roles = "SuperAdministrator, Admin, Customer")]
+@attribute [Authorize]
 @inject SessionUserService sessionUser
 <div class="container-fluid">
 

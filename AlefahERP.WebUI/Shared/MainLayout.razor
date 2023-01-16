@@ -1,4 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.DataProtection;
+@using Microsoft.AspNetCore.Identity;
 @using Radzen.Blazor
 @using AlefahERP.WebUI.Data
 @inherits LayoutComponentBase
@@ -6,6 +8,9 @@
 @inject NavigationService NavigationService
 @inject NavigationManager UriHelper
 @inject IJSRuntime JSRuntime
+@inject SessionUserService sessionUser
+@*@inject SignInManager<IdentityUser> SigninManger*@
+@attribute [Authorize]
 
 <RadzenDialog />
 <RadzenNotification />
@@ -20,18 +25,13 @@
                 </RadzenSidebarToggle>
             </div>
             <div class="col-7 d-flex align-items-center justify-content-end">
-                <RadzenProfileMenu>
-                    <Template>
-                        <RadzenGravatar Email="info@mail.com">
 
-                        </RadzenGravatar>
-                    </Template>
-                    <ChildContent>
-                        <RadzenProfileMenuItem Text="Signout" Path="/singout">
-
-                        </RadzenProfileMenuItem>
-                    </ChildContent>
-                </RadzenProfileMenu>
+                <RadzenMenu class="me-3">
+                    <RadzenMenuItem Text=@(sessionUser.User.FullName) Icon="perm_identity">
+                        <RadzenMenuItem Text="My Profile" Path="profile" Icon="account_circle"></RadzenMenuItem>
+                        <RadzenMenuItem Text="Logout" Click=@(args => OnLogout(args)) Icon="logout"></RadzenMenuItem>
+                    </RadzenMenuItem>
+                </RadzenMenu>
             </div>
         </div>
 
@@ -141,5 +141,15 @@
         //var url = UriHelper.GetUriWithQueryParameter("theme", $"{value}");
 
         //UriHelper.NavigateTo(url, true);
+    }
+
+    async Task OnLogout(object sender)
+    {
+
+        //await SigninManger.SignOutAsync();
+
+
+        UriHelper.NavigateTo("/");
+
     }
 }

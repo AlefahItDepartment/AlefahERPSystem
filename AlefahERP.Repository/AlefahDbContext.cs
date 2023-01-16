@@ -62,18 +62,17 @@ namespace AlefahERP.Repository
         public DbSet<BranchSchedules> BranchSchedules { get; set; }
         public DbSet<viewCustomerAddressLines> viewCustomerAddressLines { get; set; }
         public DbSet<AddressLineType> AddressLineType { get; set; }
-        public DbSet<PetBloodChemistryDetails> PetBloodChemistryDetails { get; set; }
-        public DbSet<PetBloodChemistryTypes> PetBloodChemistryTypes { get; set; }
-        public DbSet<PetBloodScreenDetails> PetBloodScreenDetails { get; set; }
-        public DbSet<PetBloodScreenTypes> PetBloodScreenTypes { get; set; }
+        //public DbSet<PetBloodChemistryDetails> PetBloodChemistryDetails { get; set; }
+        //public DbSet<PetBloodChemistryTypes> PetBloodChemistryTypes { get; set; }
+        //public DbSet<PetBloodScreenDetails> PetBloodScreenDetails { get; set; }
+        //public DbSet<PetBloodScreenTypes> PetBloodScreenTypes { get; set; }
         public DbSet<PetBreeds> PetBreeds { get; set; }
         public DbSet<PetColors> PetColors { get; set; }
         public DbSet<PetSizes> PetSizes { get; set; }
-        public DbSet<PetExamineDetails> PetExamineDetails { get; set; }
-        public DbSet<PetExamineTypes> PetExamineTypes { get; set; }
-        public DbSet<PetOrigins> PetOrigins { get; set; }
+        //public DbSet<PetExamineDetails> PetExamineDetails { get; set; }
+        //public DbSet<PetExamineTypes> PetExamineTypes { get; set; }
+        //public DbSet<PetOrigins> PetOrigins { get; set; }
         public DbSet<PetSpecies> PetSpecies { get; set; }
-        public DbSet<PetSubSpecies> PetSubSpecies { get; set; }
         public DbSet<_ApointmentsCounter> _ApointmentsCounter { get; set; }
         public DbSet<Employees1> Employees1 { get; set; }
         public DbSet<EmployeesPictures> EmployeesPictures { get; set; }
