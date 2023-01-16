@@ -50,7 +50,7 @@ namespace AlefahERP.WebUI.Pages
             }
             else
             {
-                return Page();
+                return Redirect("/");
             }
         }
 
