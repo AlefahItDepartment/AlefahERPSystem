@@ -8,7 +8,7 @@ namespace AlefahERP.DTO
 {
     public class Project
     {
-        public int Projects { get; set; }
+        public int ProjectID { get; set; }
         public string ProjectNameEN { get; set; }
         public string ProjectNameAR { get; set; }
         public int SortOrder{ get; set; }
