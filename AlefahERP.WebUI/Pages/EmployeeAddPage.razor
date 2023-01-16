@@ -1,5 +1,7 @@
 ﻿@page "/employeeadd"
 @using System.Linq.Dynamic.Core
+@using AlefahERP.Common.RequestModels;
+@using AlefahERP.DTO;
 @inject DialogService DialogService
 @implements IDisposable
 @attribute [Authorize]
@@ -31,88 +33,88 @@
                         <div class="col-lg-12 mb-3 px-3">
                             <RadzenCard>
                                 <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Employee Picture</RadzenText>
-                                <RadzenFileInput @bind-Value=@photo TValue="string" @bind-FileName=@fileName @bind-FileSize=@fileSize Class="w-100"
+                                <RadzenFileInput @bind-Value=@model.UploadEmployeePicture TValue="string" @bind-FileName=@fileName @bind-FileSize=@fileSize Class="w-100"
                                                  Change=@(args => OnChange(args, "FileInput")) Error=@(args => OnError(args, "FileInput")) />
                             </RadzenCard>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Employee Code</RadzenLabel>
-                            <RadzenTextBox Name="EmployeeCode" class="w-100" />
+                            <RadzenTextBox Name="EmployeeCode" @bind-Value=@model.Employees1.EmployeeCode class="w-100" />
                         </div>
                         <div class="col-lg-3 col-md-3 col-xl-3 col-sm-12">
                             <RadzenLabel>First Name</RadzenLabel>
-                            <RadzenTextBox Name="FirstName" class="w-100" />
+                            <RadzenTextBox Name="FirstName" @bind-Value=@model.Employees1.FirstName class="w-100" />
                         </div>
                         <div class="col-lg-2 col-md-2 col-xl-2 col-sm-12">
                             <RadzenLabel>Middle Name</RadzenLabel>
-                            <RadzenTextBox Name="MiddleName" class="w-100" />
+                            <RadzenTextBox Name="MiddleName" @bind-Value=@model.Employees1.MiddleName class="w-100" />
                         </div>
                         <div class="col-lg-3 col-md-3 col-xl-3 col-sm-12">
                             <RadzenLabel>Last Name</RadzenLabel>
-                            <RadzenTextBox Name="LastName" class="w-100" />
+                            <RadzenTextBox Name="LastName" @bind-Value=@model.Employees1.LastName class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Date of Birth</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="DateofBirth" class="w-100" />
+                            <RadzenDatePicker TValue="DateTime" DateFormat="d" Name="DateofBirth" @bind-Value=@model.Employees1.DateofBirth class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Gender</RadzenLabel>
-                            <RadzenDropDown Name="Gender" TValue="string" class="w-100">
+                            <RadzenDropDown Name="GenderID" @bind-Value=@model.Employees1.GenderID TValue="int" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Nationality</RadzenLabel>
-                            <RadzenDropDown Name="Nationality" TValue="string" class="w-100">
+                            <RadzenDropDown Name="NationalityID" @bind-Value=@model.Employees1.NationalityID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>National/Iqama ID</RadzenLabel>
-                            <RadzenTextBox Name="IDNumber" class="w-100" />
+                            <RadzenTextBox Name="NationalID" @bind-Value=@model.Employees1.NationalID class="w-100" />
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Expiry Date</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="IDExpiry" class="w-100" />
+                            <RadzenDatePicker TValue="DateTime" DateFormat="d" Name="NationalIDExpiry" @bind-Value=@model.Employees1.NationalIDExpiry class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Passport No</RadzenLabel>
-                            <RadzenTextBox Name="PassportNo" class="w-100" />
-                        </div>                     
+                            <RadzenTextBox Name="PassportNo" @bind-Value=@model.Employees1.PassportID class="w-100" />
+                        </div>
 
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>IBAN</RadzenLabel>
-                            <RadzenTextBox TValue="string" Name="IBAN" class="w-100" />
+                            <RadzenTextBox TValue="string" Name="IBAN" @bind-Value=@model.Employees1.IBAN class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Account No.</RadzenLabel>
-                            <RadzenTextBox Name="AccountNumber" class="w-100" />
+                            <RadzenTextBox Name="AccountNumber" @bind-Value=@model.Employees1.AccountNumber class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Bank Name</RadzenLabel>
-                            <RadzenTextBox Name="BankName" class="w-100" />
+                            <RadzenTextBox Name="BankName" @bind-Value=@model.Employees1.BankName class="w-100" />
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Mobile</RadzenLabel>
-                            <RadzenTextBox Name="Mobile" class="w-100" />
+                            <RadzenTextBox Name="Mobile" @bind-Value=@model.Employees1.Mobile class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Email</RadzenLabel>
-                            <RadzenTextBox Name="Email" class="w-100" />
+                            <RadzenTextBox Name="Email" @bind-Value=@model.Employees1.Email class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Qualification</RadzenLabel>
-                            <RadzenDropDown Name="Qualification" TValue="string" class="w-100">
+                            <RadzenDropDown Name="QualificationID" @bind-Value=@model.Employees1.QualificationID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Specialization</RadzenLabel>
-                            <RadzenDropDown Name="Specialization" TValue="string" class="w-100">
+                            <RadzenDropDown Name="SpecializationID" @bind-Value=@model.Employees1.SpecializationID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Religion</RadzenLabel>
-                            <RadzenDropDown Name="Religion" TValue="string" class="w-100">
+                            <RadzenDropDown Name="ReligionID" @bind-Value=@model.Employees1.ReligionID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                     </div>
@@ -121,82 +123,86 @@
                     <div class="row">
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Site</RadzenLabel>
-                            <RadzenDropDown Name="Site" TValue="string" class="w-100">
+                            <RadzenDropDown Name="BranchID" @bind-Value=@model.EmployeesEmployments.BranchID TValue="int" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Project</RadzenLabel>
-                            <RadzenDropDown Name="Project" TValue="string" class="w-100">
+                            <RadzenDropDown Name="ProjectID" @bind-Value=@model.EmployeesEmployments.ProjectID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Department</RadzenLabel>
-                            <RadzenDropDown Name="Department" TValue="string" class="w-100">
+                            <RadzenDropDown Name="DepartmentID" @bind-Value=@model.EmployeesEmployments.DepartmentID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Section</RadzenLabel>
-                            <RadzenDropDown Name="Section" TValue="string" class="w-100">
+                            <RadzenDropDown Name="SectionID" @bind-Value=@model.EmployeesEmployments.SectionID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Designation/Position</RadzenLabel>
-                            <RadzenDropDown Name="Designation" TValue="string" class="w-100">
+                            <RadzenDropDown Name="DesignationID" @bind-Value=@model.EmployeesEmployments.DesignationID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Category</RadzenLabel>
-                            <RadzenDropDown Name="Category" TValue="string" class="w-100">
+                            <RadzenDropDown Name="CategoryID" @bind-Value=@model.EmployeesEmployments.EmploymentCategoryID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Hiring Date</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="HiringDate" class="w-100" />
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="HiringDate" @bind-Value=@model.EmployeesEmployments.HiringDate class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Employment Date</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="EmploymentDate" class="w-100" />
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="EmploymentDate" @bind-Value=@model.EmployeesEmployments.EmploymentDate class="w-100" />
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Contract Type</RadzenLabel>
-                            <RadzenDropDown Name="ContractType" TValue="string" class="w-100">
+                            <RadzenDropDown Name="ContractTypeID" @bind-Value=@model.EmployeesEmployments.ContractTypeID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Contract Start Date</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="ContractStartDate" class="w-100" />
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="ContractStartDate" @bind-Value=@model.EmployeesEmployments.ContractStartDate class="w-100" />
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Contract End Date</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="ContractEndDate" class="w-100" />
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="ContractEndDate" @bind-Value=@model.EmployeesEmployments.ContractEndDate class="w-100" />
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Employment Status</RadzenLabel>
-                            <RadzenDropDown Name="EmploymentStatus" TValue="string" class="w-100">
+                            <RadzenDropDown Name="EmploymentStatusID" @bind-Value=@model.EmployeesEmployments.EmploymentStatusID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Insurance Company</RadzenLabel>
-                            <RadzenDropDown Name="InsuranceCompany" TValue="string" class="w-100">
+                            <RadzenDropDown Name="InsuranceCompanyID" @bind-Value=@model.EmployeesHealthInsuranceDetails.InsuranceCompanyID TValue="int" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Insurance Type</RadzenLabel>
-                            <RadzenDropDown Name="InsuranceType" TValue="string" class="w-100">
+                            <RadzenDropDown Name="InsuranceTypeID" @bind-Value=@model.EmployeesHealthInsuranceDetails.InsuranceTypeID TValue="int" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
-                            <RadzenLabel>Insurance Date</RadzenLabel>
-                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="InsuranceDate" class="w-100" />
+                            <RadzenLabel>Insurance Start Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="InsuranceStartDate" @bind-Value=@model.EmployeesHealthInsuranceDetails.InsuranceStartDate class="w-100" />
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12">
+                            <RadzenLabel>Insurance End Date</RadzenLabel>
+                            <RadzenDatePicker TValue="DateTime?" DateFormat="d" Name="InsuranceEndDate" @bind-Value=@model.EmployeesHealthInsuranceDetails.InsuranceEndDate class="w-100" />
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>Report To</RadzenLabel>
-                            <RadzenDropDown Name="ReportToEmployeeID" TValue="string" class="w-100">
+                            <RadzenDropDown Name="ReportToEmployeeID" @bind-Value=@model.EmployeesEmployments.ReportToEmployeeID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-4 col-mcol-md-4 col-xl-4 col-sm-12">
                             <RadzenLabel>User Role</RadzenLabel>
-                            <RadzenDropDown Name="UserRoleID" TValue="string" class="w-100">
+                            <RadzenDropDown Name="UserRoleID" @bind-Value=@model.EmployeesEmployments.UserRoleID TValue="int" class="w-100">
                             </RadzenDropDown>
                         </div>
                     </div>
@@ -209,29 +215,24 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <RadzenLabel Text="Address Line 1" />
-                            <RadzenTextBox Name="AddressLine1" class="w-100" />
+                            <RadzenTextBox Name="AddressLine1" @bind-Value=@model.EmployeesAddress.AddressLine1  class="w-100" />
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <RadzenLabel Text="Address Line 2" />
-                            <RadzenTextBox Name="AddressLine2" class="w-100" />
-                        </div>
-                        <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
-                            <RadzenLabel>Country</RadzenLabel>
-                            <RadzenDropDown Name="CountryID" TValue="string" class="w-100">
-                            </RadzenDropDown>
-                        </div>
+                            <RadzenTextBox Name="AddressLine2" @bind-Value=@model.EmployeesAddress.AddressLine2 class="w-100" />
+                        </div>                      
                         <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
                             <RadzenLabel>Region</RadzenLabel>
-                            <RadzenDropDown Name="RegionID" TValue="string" class="w-100">
+                            <RadzenDropDown Name="RegionID" @bind-Value=@model.EmployeesAddress.RegionID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
                             <RadzenLabel>Zip Code</RadzenLabel>
-                            <RadzenTextBox Name="ZipCode" class="w-100" />
+                            <RadzenTextBox Name="ZipCode" @bind-Value=@model.EmployeesAddress.ZipCode class="w-100" />
                         </div>
                         <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
                             <RadzenLabel>City</RadzenLabel>
-                            <RadzenDropDown Name="CityID" TValue="string" class="w-100">
+                            <RadzenDropDown Name="CityID" @bind-Value=@model.EmployeesAddress.CityID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                     </div>
@@ -241,28 +242,29 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <RadzenLabel Text="Address Line 1" />
-                            <RadzenTextBox Name="AddressLine1" class="w-100" />
+                            <RadzenTextBox Name="HomeAddressLine1" @bind-Value=@model.EmployeesAddress.HomeAddressLine1 class="w-100" />
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <RadzenLabel Text="Address Line 2" />
-                            <RadzenTextBox Name="AddressLine2" class="w-100" />
+                            <RadzenTextBox Name="HomeAddressLine2" @bind-Value=@model.EmployeesAddress.HomeAddressLine2 class="w-100" />
                         </div>
                         <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
                             <RadzenLabel>Country</RadzenLabel>
-                            <RadzenDropDown Name="CountryID" TValue="string" class="w-100">
+                            <RadzenDropDown Name="HomeCountryID" @bind-Value=@model.EmployeesAddress.HomeCountryID TValue="int?" class="w-100">
                             </RadzenDropDown>
                         </div>
                         <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
                             <RadzenLabel>Region</RadzenLabel>
-                            <RadzenTextBox Name="Region" class="w-100" />
+                            <RadzenDropDown Name="HomeRegionID" @bind-Value=@model.EmployeesAddress.HomeRegionID TValue="int?" class="w-100">
+                            </RadzenDropDown>
                         </div>
                         <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
                             <RadzenLabel>Zip Code</RadzenLabel>
-                            <RadzenTextBox Name="ZipCode" class="w-100" />
+                            <RadzenTextBox Name="HomeZipCode" @bind-Value=@model.EmployeesAddress.HomeZipCode class="w-100" />
                         </div>
                         <div class="col-lg-6 col-mcol-md-6 col-xl-6 col-sm-12">
                             <RadzenLabel>City</RadzenLabel>
-                            <RadzenTextBox Name="City" class="w-100" />
+                            <RadzenTextBox Name="HomeCityName" @bind-Value=@model.EmployeesAddress.HomeCityName class="w-100" />
                         </div>
 
                     </div>
@@ -318,7 +320,7 @@
                             </RadzenCard>
                         </div>
                     </div>
-                </RadzenStepsItem>               
+                </RadzenStepsItem>
                 <RadzenStepsItem Text="Finish"></RadzenStepsItem>
             </Steps>
         </RadzenSteps>
@@ -329,8 +331,27 @@
     string photo;
     string fileName;
     long? fileSize;
+    int compID = 1;
+
+    Employee1RequestModel model = new Employee1RequestModel();
 
 
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        model.Employees1 = new Employees1();
+        model.UploadEmployeePicture = "";
+        model.EmployeesPictures = new EmployeesPictures();
+        model.EmployeesAddress  = new EmployeesAddress();
+        model.EmployeesEmployments = new EmployeesEmployments();
+        model.EmployeesHealthInsuranceDetails = new EmployeesHealthInsuranceDetails();
+        model.EmployeesAttachments = new List<EmployeesAttachments>();
+
+
+    }
 
     void OnChange(string value, string name)
     {

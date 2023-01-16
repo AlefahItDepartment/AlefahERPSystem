@@ -24,7 +24,7 @@ namespace AlefahERP.DTO
         public int? HomeCountryID { get; set; }
         public int? HomeRegionID { get; set; }
         public string? HomeZipCode { get; set; }
-        public int? HomeCityID { get; set; }
+        public string? HomeCityName { get; set; }
 
     }
 }

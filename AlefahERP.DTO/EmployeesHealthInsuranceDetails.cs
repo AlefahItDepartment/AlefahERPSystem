@@ -14,7 +14,7 @@ namespace AlefahERP.DTO
         public int EmployeeID { get; set; }
         public int InsuranceCompanyID { get; set; }
         public int InsuranceTypeID { get; set; }
-        public int InsuranceStartDate { get; set; }
-        public int InsuranceEndDate { get; set; }
+        public DateTime? InsuranceStartDate { get; set; }
+        public DateTime? InsuranceEndDate { get; set; }
     }
 }
