@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ww0qNBiH/FS9qopqjoPcihJFRV8+nAJqhz3t05yWXtA=",
+  "Hash": "2PAbi7rUfanFq07/Vrc9Knqp/q/Aj7ozw7ksPxT+XRo=",
   "Source": "AlefahERP.WebUI",
   "BasePath": "_content/AlefahERP.WebUI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "AlefahERP.WebUI\\wwwroot",
       "Source": "AlefahERP.WebUI",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\dark.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\dark.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/dark.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\dark.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\dark.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\dark-base.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\dark-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/dark-base.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\dark-base.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\dark-base.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\default.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\default.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/default.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\default.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\default.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\default-base.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\default-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/default-base.css",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\default-base.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\default-base.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\humanistic.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\humanistic.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic.css",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\humanistic.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\humanistic.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\humanistic-base.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\humanistic-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/humanistic-base.css",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\humanistic-base.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\humanistic-base.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\material.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\material.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material.css",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\material.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\material.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\material-base.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\material-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/material-base.css",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\material-base.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\material-base.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\software.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\software.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software.css",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\software.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\software.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\software-base.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\software-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/software-base.css",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\software-base.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\software-base.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\standard.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\standard.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard.css",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\standard.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\standard.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\standard-base.css",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\standard-base.css",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "css/standard-base.css",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\standard-base.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\css\\standard-base.css"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\MaterialIcons-Regular.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\MaterialIcons-Regular.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/MaterialIcons-Regular.woff",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\MaterialIcons-Regular.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\MaterialIcons-Regular.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-300.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-300.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v15-latin-300.woff",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-300.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-300.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-700.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-700.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v15-latin-700.woff",
       "AssetKind": "All",
@@ -269,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-700.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-700.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-regular.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-regular.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v15-latin-regular.woff",
       "AssetKind": "All",
@@ -286,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-regular.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v15-latin-regular.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-300.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-300.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v30-latin-300.woff",
       "AssetKind": "All",
@@ -303,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-300.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-300.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-500.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-500.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v30-latin-500.woff",
       "AssetKind": "All",
@@ -320,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-500.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-500.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-700.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-700.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v30-latin-700.woff",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-700.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-700.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-regular.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-regular.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/roboto-v30-latin-regular.woff",
       "AssetKind": "All",
@@ -354,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-regular.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\roboto-v30-latin-regular.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Black.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Black.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Black.woff",
       "AssetKind": "All",
@@ -371,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Black.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Black.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-BlackIt.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-BlackIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-BlackIt.woff",
       "AssetKind": "All",
@@ -388,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-BlackIt.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-BlackIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Bold.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Bold.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Bold.woff",
       "AssetKind": "All",
@@ -405,13 +405,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Bold.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Bold.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-BoldIt.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-BoldIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-BoldIt.woff",
       "AssetKind": "All",
@@ -422,13 +422,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-BoldIt.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-BoldIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-ExtraLight.woff",
       "AssetKind": "All",
@@ -439,13 +439,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-ExtraLightIt.woff",
       "AssetKind": "All",
@@ -456,13 +456,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-It.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-It.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-It.woff",
       "AssetKind": "All",
@@ -473,13 +473,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-It.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-It.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Light.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Light.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Light.woff",
       "AssetKind": "All",
@@ -490,13 +490,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Light.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Light.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-LightIt.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-LightIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-LightIt.woff",
       "AssetKind": "All",
@@ -507,13 +507,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-LightIt.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-LightIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Regular.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Regular.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Regular.woff",
       "AssetKind": "All",
@@ -524,13 +524,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Regular.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Regular.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Semibold.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Semibold.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-Semibold.woff",
       "AssetKind": "All",
@@ -541,13 +541,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Semibold.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-Semibold.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "fonts/SourceSansPro-SemiboldIt.woff",
       "AssetKind": "All",
@@ -558,13 +558,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff"
     },
     {
-      "Identity": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\Radzen.Blazor.js",
+      "Identity": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\Radzen.Blazor.js",
       "SourceId": "Radzen.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\",
       "BasePath": "_content/Radzen.Blazor",
       "RelativePath": "Radzen.Blazor.js",
       "AssetKind": "All",
@@ -575,13 +575,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Imran\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\Radzen.Blazor.js"
+      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\radzen.blazor\\4.5.0\\staticwebassets\\Radzen.Blazor.js"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\AlefahERP.WebUI.styles.css",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\AlefahERP.WebUI.styles.css",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "AlefahERP.WebUI.styles.css",
       "AssetKind": "All",
@@ -592,13 +592,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\AlefahERP.WebUI.styles.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\AlefahERP.WebUI.styles.css"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AlefahERP.WebUI.bundle.scp.css",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AlefahERP.WebUI.bundle.scp.css",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "AlefahERP.WebUI.bundle.scp.css",
       "AssetKind": "All",
@@ -609,13 +609,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AlefahERP.WebUI.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AlefahERP.WebUI.bundle.scp.css"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\blazor.polyfill.min.js",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\blazor.polyfill.min.js",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "blazor.polyfill.min.js",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\blazor.polyfill.min.js"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\fluent-base.css",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\fluent-base.css",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/fluent-base.css",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\css\\fluent-base.css"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\material-dark-base.css",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\material-dark-base.css",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/material-dark-base.css",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\css\\material-dark-base.css"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\css\\site.css",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\favicon.ico",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\favicon.png",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\MaterialIcons-Regular.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\MaterialIcons-Regular.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/MaterialIcons-Regular.woff",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\MaterialIcons-Regular.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\MaterialSymbols-Outlined.woff2",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\MaterialSymbols-Outlined.woff2",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/MaterialSymbols-Outlined.woff2",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\MaterialSymbols-Outlined.woff2"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-regular.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-regular.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/roboto-regular.woff",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\roboto-regular.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-300.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-300.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/roboto-v15-latin-300.woff",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\roboto-v15-latin-300.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-700.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-700.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/roboto-v15-latin-700.woff",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\roboto-v15-latin-700.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-regular.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-regular.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/roboto-v15-latin-regular.woff",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\roboto-v15-latin-regular.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-300.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-300.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/roboto-v30-latin-300.woff",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\roboto-v30-latin-300.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-500.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-500.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/roboto-v30-latin-500.woff",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\roboto-v30-latin-500.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-700.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-700.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/roboto-v30-latin-700.woff",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\roboto-v30-latin-700.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-regular.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-regular.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/roboto-v30-latin-regular.woff",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\roboto-v30-latin-regular.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Black.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Black.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-Black.woff",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-Black.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-BlackIt.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-BlackIt.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-BlackIt.woff",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-BlackIt.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Bold.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Bold.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-Bold.woff",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-Bold.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-BoldIt.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-BoldIt.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-BoldIt.woff",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-BoldIt.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-ExtraLight.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-ExtraLight.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-ExtraLight.woff",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-ExtraLight.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-ExtraLightIt.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-ExtraLightIt.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-ExtraLightIt.woff",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-ExtraLightIt.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-It.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-It.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-It.woff",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-It.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Light.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Light.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-Light.woff",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-Light.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-LightIt.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-LightIt.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-LightIt.woff",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-LightIt.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Regular.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Regular.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-Regular.woff",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-Regular.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Semibold.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Semibold.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-Semibold.woff",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-Semibold.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-SemiboldIt.woff",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-SemiboldIt.woff",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "fonts/SourceSansPro-SemiboldIt.woff",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-SemiboldIt.woff"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\accenture.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\accenture.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/accenture.svg",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\images\\accenture.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\allianz.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\allianz.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/allianz.svg",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\images\\allianz.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\background.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\background.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/background.svg",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\images\\background.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\checkmark.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\checkmark.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/checkmark.svg",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\images\\checkmark.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\community.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\community.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/community.svg",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\images\\community.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\dell.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\dell.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/dell.svg",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dell.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\deloitte.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\deloitte.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/deloitte.svg",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\images\\deloitte.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\DHL.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\DHL.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/DHL.svg",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\images\\DHL.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\easier-than-you-think.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\easier-than-you-think.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/easier-than-you-think.svg",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\images\\easier-than-you-think.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\eurobank.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\eurobank.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/eurobank.svg",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\images\\eurobank.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\hero.png",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\hero.png",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/hero.png",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hero.png"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\import.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\import.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/import.svg",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\images\\import.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\include-radzen.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\include-radzen.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/include-radzen.svg",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\images\\include-radzen.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\install.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\install.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/install.svg",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\images\\install.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\konica-minolta.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\konica-minolta.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/konica-minolta.svg",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\images\\konica-minolta.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\microsoft.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\microsoft.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/microsoft.svg",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\images\\microsoft.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\nasa.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\nasa.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/nasa.svg",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nasa.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\nokia.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\nokia.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/nokia.svg",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nokia.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\nuget-explorer.png",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\nuget-explorer.png",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/nuget-explorer.png",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nuget-explorer.png"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\play.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\play.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/play.svg",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\images\\play.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\porsche.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\porsche.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/porsche.svg",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\images\\porsche.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\premium.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\premium.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/premium.svg",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\images\\premium.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\radzen.mp4",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\radzen.mp4",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/radzen.mp4",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\images\\radzen.mp4"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\radzen-blazor-components.png",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\radzen-blazor-components.png",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/radzen-blazor-components.png",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\images\\radzen-blazor-components.png"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\radzen-blazor-studio-dark.png",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\radzen-blazor-studio-dark.png",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/radzen-blazor-studio-dark.png",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\images\\radzen-blazor-studio-dark.png"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\radzen-nuget.png",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\radzen-nuget.png",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/radzen-nuget.png",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\images\\radzen-nuget.png"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\siemens.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\siemens.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/siemens.svg",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\images\\siemens.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\success.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\success.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/success.svg",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\images\\success.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\theme.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\theme.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/theme.svg",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\images\\theme.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\use-component.svg",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\images\\use-component.svg",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "images/use-component.svg",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\images\\use-component.svg"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\js\\blazor.server.js",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\js\\blazor.server.js",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "js/blazor.server.js",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\js\\blazor.server.js"
     },
     {
-      "Identity": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\js\\highlight.pack.js",
+      "Identity": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\js\\highlight.pack.js",
       "SourceId": "AlefahERP.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.WebUI\\wwwroot\\",
       "BasePath": "_content/AlefahERP.WebUI",
       "RelativePath": "js/highlight.pack.js",
       "AssetKind": "All",
