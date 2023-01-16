@@ -1,4 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.DataProtection;
+@using Microsoft.AspNetCore.Identity;
 @using Radzen.Blazor
 @using AlefahERP.WebUI.Data
 @inherits LayoutComponentBase
@@ -6,6 +8,9 @@
 @inject NavigationService NavigationService
 @inject NavigationManager UriHelper
 @inject IJSRuntime JSRuntime
+@inject SessionUserService sessionUser
+@*@inject SignInManager<IdentityUser> SigninManger*@
+@attribute [Authorize]
 
 <RadzenDialog />
 <RadzenNotification />
@@ -20,6 +25,13 @@
                 </RadzenSidebarToggle>
             </div>
             <div class="col-7 d-flex align-items-center justify-content-end">
+
+                <RadzenMenu class="me-3">
+                    <RadzenMenuItem Text=@(sessionUser.User.FullName) Icon="perm_identity">
+                        <RadzenMenuItem Text="My Profile" Path="profile" Icon="account_circle"></RadzenMenuItem>
+                        <RadzenMenuItem Text="Logout" Path="Logout" Icon="logout"></RadzenMenuItem>
+                    </RadzenMenuItem>
+                </RadzenMenu>
             </div>
         </div>
 
@@ -99,6 +111,7 @@
     bool bodyExpanded = false;
     bool rendered;
 
+
     IEnumerable<Navigation> navigations;
     protected override void OnInitialized()
     {
@@ -130,4 +143,5 @@
 
         //UriHelper.NavigateTo(url, true);
     }
+
 }

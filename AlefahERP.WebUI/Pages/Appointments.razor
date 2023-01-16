@@ -1,0 +1,359 @@
+﻿@page "/appointments"
+@using AlefahERP.DTO
+@using AlefahERP.Services
+@using System.Linq.Dynamic.Core
+@using AlefahERP.WebUI.Data;
+@using System.Security.Claims;
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authentication.Cookies
+@inject IUnitOfWork unitofWork
+@inject DialogService DialogService
+@implements IDisposable
+@attribute [Authorize]
+@inject SessionUserService sessionUser
+<div class="container-fluid">
+
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <RadzenText TextStyle="TextStyle.DisplayH4" TagName="TagName.H4" Text="Appointments" />
+        </div>
+        <div class="col-lg-6">
+            <div class="d-block justify-content-end">
+                <RadzenBreadCrumb Class="rz-text-align-end">
+                    <Template Context="item">
+                        <RadzenBadge Text="@item.Text" IsPill="true" />
+                    </Template>
+                    <ChildContent>
+                        <RadzenBreadCrumbItem Text="Pet Care" />
+                        <RadzenBreadCrumbItem Icon="add" Text="Appointments" />
+                    </ChildContent>
+                </RadzenBreadCrumb>
+            </div>
+        </div>
+    </div>
+    <RadzenCard>
+        <RadzenText TextStyle="TextStyle.DisplayH5" TagName="TagName.H5" Class="mb-5">Appointments</RadzenText>
+        <RadzenTabs Change="OnChange">
+            <Tabs>
+                <RadzenTabsItem Text="Pending">
+
+                    <RadzenDataGrid @ref=@pendingGrid Data="pendingBookings" LoadData=@GridPendingAppointments Count="@pendingCounts" IsLoading="@isPendingGridLoad" TItem="viewBookingHead" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+                        <Columns>
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="AppointmentDate" Title="Appt Date" FormatString="{0:d}" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BookingNumber" Title="Appt No" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="ServiceTypeNameEN" Title="Service" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="FullName" Title="Name" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="Mobile" Title="Mobile" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="FileNumber" Title="File No" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="PetName" Title="Pet" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BranchNameEN" Title="Branch" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BookingHeadID" Title="Action" Context="item">
+                                <Template>
+                                    <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.BookingHeadID)) />
+                                </Template>
+                            </RadzenDataGridColumn>
+                        </Columns>
+                    </RadzenDataGrid>
+                </RadzenTabsItem>
+                <RadzenTabsItem Text="Assign">
+                    <RadzenDataGrid @ref=@assignGrid Data="assignBookings" LoadData=@GridAssignAppointments Count="@assignCounts" IsLoading="@isAssignGridLoad" TItem="viewBookingHead" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+                        <Columns>
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="AppointmentDate" Title="Appt Date" FormatString="{0:d}" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BookingNumber" Title="Appt No" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="ServiceTypeNameEN" Title="Service" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="FullName" Title="Name" />
+                               <RadzenDataGridColumn TItem="viewBookingHead" Property="FileNumber" Title="File No" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="Mobile" Title="Mobile" />                         
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="PetName" Title="Pet" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BranchNameEN" Title="Branch" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BookingHeadID" Title="Action" Context="item">
+                                <Template>
+                                    <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.BookingHeadID)) />
+                                </Template>
+                            </RadzenDataGridColumn>
+                        </Columns>
+                    </RadzenDataGrid>
+                </RadzenTabsItem>
+                <RadzenTabsItem Text="Close">
+                    <RadzenDataGrid @ref=@closeGrid Data="closeBookings" LoadData=@GridCloseAppointments Count="@closeCounts" IsLoading="@isCloseGridLoad" TItem="viewBookingHead" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" PageSize="5" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Left" ShowPagingSummary="true">
+                        <Columns>
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="AppointmentDate" Title="Appt Date" FormatString="{0:d}" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BookingNumber" Title="Appt No" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="ServiceTypeNameEN" Title="Service" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="FullName" Title="Name" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="Mobile" Title="Mobile" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="FileNumber" Title="File No" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="PetName" Title="Pet" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BranchNameEN" Title="Branch" />
+                            <RadzenDataGridColumn TItem="viewBookingHead" Property="BookingHeadID" Title="Action" Context="item">
+                                <Template>
+                                    <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium" Icon="edit" Class="me-1" Click=@(agrds => OnOpenDialog(item.BookingHeadID)) />
+                                </Template>
+                            </RadzenDataGridColumn>
+                        </Columns>
+                    </RadzenDataGrid>
+                </RadzenTabsItem>
+            </Tabs>
+        </RadzenTabs>
+
+    </RadzenCard>
+</div>
+
+@code {
+
+
+    RadzenDataGrid<viewBookingHead> pendingGrid;
+    RadzenDataGrid<viewBookingHead> assignGrid;
+    RadzenDataGrid<viewBookingHead> closeGrid;
+
+
+    List<viewBookingHead> pendingBookings;
+    List<viewBookingHead> assignBookings;
+    List<viewBookingHead> closeBookings;
+
+    int pendingCounts;
+    int assignCounts;
+    int closeCounts;
+
+    bool isPendingGridLoad;
+    bool isAssignGridLoad;
+    bool isCloseGridLoad;
+
+    viewEmployees sessionEmployee;
+    int sessionBranchID;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+
+     
+
+
+        if (sessionUser.Employee != null)
+        {
+            sessionEmployee = sessionUser.Employee;
+
+            if (sessionEmployee != null)
+            {
+
+                sessionBranchID = sessionEmployee.BranchID;
+
+                await OnChange(0);
+
+            }
+        }
+
+    }
+
+
+    public void Dispose()
+    {
+
+
+
+    }
+
+
+    public async Task OnOpenDialog(int bookingHeadID)
+    {
+        await DialogService.OpenSideAsync<AppointmentAssign>($"Assign Appointment",
+              new Dictionary<string, object>() { { "BookingHeadID", bookingHeadID } },
+              new SideDialogOptions() { Position = DialogPosition.Right });
+
+    }
+
+
+
+    public async Task OnChange(int index)
+    {
+        try
+        {
+            switch (index)
+            {
+                case 0:
+                    await GridPendingAppointments();
+                    break;
+                case 1:
+                    await GridAssignAppointments();
+                    break;
+                case 2:
+                    await GridCloseAppointments();
+                    break;
+                default:
+                    await GridPendingAppointments();
+                    break;
+            }
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+
+    }
+
+    async Task GridPendingAppointments(LoadDataArgs? args = null)
+    {
+        isPendingGridLoad = true;
+
+
+        await Task.Yield();
+
+
+
+
+        IQueryable<viewBookingHead> query = this.unitofWork.Booking.BookingHead.GetAll(x => x.BookingStatusNameEN.ToLower() == "pending");
+
+        if (sessionUser.User.UserRoleCode.ToLower() != "superadministrator")
+            query = query.Where(x => x.BranchID == sessionBranchID);
+
+
+        if (args != null)
+        {
+            if (!string.IsNullOrEmpty(args.Filter))
+            {
+
+                query = query.Where(args.Filter);
+            }
+
+            if (!string.IsNullOrEmpty(args.OrderBy))
+            {
+                query = query.OrderBy(args.OrderBy);
+            }
+            else
+            {
+                query = query.OrderByDescending(o => o.BookingHeadID);
+            }
+        }
+        else
+        {
+
+            query = query.OrderByDescending(o => o.BookingHeadID);
+        }
+
+        pendingCounts = query.Count();
+
+        if (args == null)
+        {
+            query = query.Skip(0).Take(5);
+        }
+        else
+        {
+            query = query.Skip(args.Skip.Value).Take(args.Top.Value);
+        }
+
+        pendingBookings = query.ToList();
+
+        isPendingGridLoad = false;
+
+    }
+    async Task GridAssignAppointments(LoadDataArgs? args = null)
+    {
+        isAssignGridLoad = true;
+
+
+        await Task.Yield();
+
+        IQueryable<viewBookingHead> query = this.unitofWork.Booking.BookingHead.GetAll(x => x.BookingStatusNameEN.ToLower() == "assign");
+
+
+        if (sessionUser.User.UserRoleCode.ToLower() != "superadministrator")
+            query = query.Where(x => x.BranchID == sessionBranchID);
+
+
+        if (args != null)
+        {
+            if (!string.IsNullOrEmpty(args.Filter))
+            {
+
+                query = query.Where(args.Filter);
+            }
+
+            if (!string.IsNullOrEmpty(args.OrderBy))
+            {
+                query = query.OrderBy(args.OrderBy);
+            }
+            else
+            {
+                query = query.OrderByDescending(o => o.BookingHeadID);
+            }
+        }
+        else
+        {
+
+            query = query.OrderByDescending(o => o.BookingHeadID);
+        }
+
+        assignCounts = query.Count();
+
+        if (args == null)
+        {
+            query = query.Skip(0).Take(5);
+        }
+        else
+        {
+            query = query.Skip(args.Skip.Value).Take(args.Top.Value);
+        }
+
+        assignBookings = query.ToList();
+
+        isAssignGridLoad = false;
+
+    }
+    async Task GridCloseAppointments(LoadDataArgs? args = null)
+    {
+        isCloseGridLoad = true;
+
+
+        await Task.Yield();
+
+        IQueryable<viewBookingHead> query = this.unitofWork.Booking.BookingHead.GetAll(x => x.BookingStatusNameEN.ToLower() == "close");
+
+         if (sessionUser.User.UserRoleCode.ToLower() != "superadministrator")
+            query = query.Where(x => x.BranchID == sessionBranchID);
+
+        if (args != null)
+        {
+            if (!string.IsNullOrEmpty(args.Filter))
+            {
+
+                query = query.Where(args.Filter);
+            }
+
+            if (!string.IsNullOrEmpty(args.OrderBy))
+            {
+                query = query.OrderBy(args.OrderBy);
+            }
+            else
+            {
+                query = query.OrderByDescending(o => o.BookingHeadID);
+            }
+        }
+        else
+        {
+
+            query = query.OrderByDescending(o => o.BookingHeadID);
+        }
+
+        closeCounts = query.Count();
+
+        if (args == null)
+        {
+            query = query.Skip(0).Take(5);
+        }
+        else
+        {
+            query = query.Skip(args.Skip.Value).Take(args.Top.Value);
+        }
+
+        closeBookings = query.ToList();
+
+        isCloseGridLoad = false;
+
+    }
+
+
+}

@@ -1060,6 +1060,9 @@
       "AlefahERP.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AlefahERP.DTO": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/AlefahERP.Common.dll": {}
         },

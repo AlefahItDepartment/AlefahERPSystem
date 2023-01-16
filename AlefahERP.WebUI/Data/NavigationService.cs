@@ -23,14 +23,14 @@
                 {
                     new Navigation {
 
-                        Name="Menu10",
-                        Path="/Menu10"
+                        Name="Appointments",
+                        Path="/appointments"
 
                     },
                     new Navigation {
 
-                        Name="Menu11",
-                        Path="/Menu11"
+                        Name="Schedules",
+                        Path="/schedules"
 
                     }
 
@@ -46,7 +46,7 @@
                 {
                     new Navigation {
 
-                        Name="Add Employee",
+                        Name="Employee Add",
                         Path="/employeeadd"
 
                     },
@@ -92,12 +92,12 @@
                                 Path="/petspecies"
 
                             },
-                            new Navigation
-                            {
-                                Name="Pet Sub Species",
-                                Path="/petsubspecies"
+                            //new Navigation
+                            //{
+                            //    Name="Pet Sub Species",
+                            //    Path="/petsubspecies"
 
-                            },
+                            //},
                             new Navigation
                             {
                                 Name="Pet Breeds",
@@ -116,48 +116,48 @@
                                 Path="/petsizes"
 
                             },
-                            new Navigation
-                            {
-                                Name="Pet Origin",
-                                Path="/petorigins"
+                            //new Navigation
+                            //{
+                            //    Name="Pet Origin",
+                            //    Path="/petorigins"
 
-                            },
-                            new Navigation
-                            {
-                                Name="Blood Chemistry Types",
-                                Path="/petbloodchemistrytypes"
+                            //},
+                            //new Navigation
+                            //{
+                            //    Name="Blood Chemistry Types",
+                            //    Path="/petbloodchemistrytypes"
 
-                            },
-                            new Navigation
-                            {
-                                Name="Blood Chemistry Details",
-                                Path="/petbloodchemistrydetails"
+                            //},
+                            //new Navigation
+                            //{
+                            //    Name="Blood Chemistry Details",
+                            //    Path="/petbloodchemistrydetails"
 
-                            },
-                            new Navigation
-                            {
-                                Name="Blood Screen Types",
-                                Path="/petbloodscreentypes"
+                            //},
+                            //new Navigation
+                            //{
+                            //    Name="Blood Screen Types",
+                            //    Path="/petbloodscreentypes"
 
-                            },
-                            new Navigation
-                            {
-                                Name="Blood Screen Details",
-                                Path="/petbloodscreendetails"
+                            //},
+                            //new Navigation
+                            //{
+                            //    Name="Blood Screen Details",
+                            //    Path="/petbloodscreendetails"
 
-                            },
-                            new Navigation
-                            {
-                                Name="Examine Types",
-                                Path="/petexaminetypes"
+                            //},
+                            //new Navigation
+                            //{
+                            //    Name="Examine Types",
+                            //    Path="/petexaminetypes"
 
-                            },
-                            new Navigation
-                            {
-                                Name="Examine Details",
-                                Path="/petexaminedetails"
+                            //},
+                            //new Navigation
+                            //{
+                            //    Name="Examine Details",
+                            //    Path="/petexaminedetails"
 
-                            }
+                            //}
 
                         }
 

@@ -1,0 +1,309 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AlefahERP.WebUI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AlefahERP.WebUI.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\blazor.polyfill.min.js",
+      "PackagePath": "staticwebassets\\blazor.polyfill.min.js"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\fluent-base.css",
+      "PackagePath": "staticwebassets\\css\\fluent-base.css"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\material-dark-base.css",
+      "PackagePath": "staticwebassets\\css\\material-dark-base.css"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\MaterialIcons-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\MaterialSymbols-Outlined.woff2",
+      "PackagePath": "staticwebassets\\fonts\\MaterialSymbols-Outlined.woff2"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Black.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Black.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-BlackIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-BlackIt.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Bold.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Bold.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-BoldIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-BoldIt.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-ExtraLight.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-ExtraLightIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-It.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-It.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Light.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Light.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-LightIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-LightIt.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Regular.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-Semibold.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Semibold.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\SourceSansPro-SemiboldIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-regular.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-300.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-300.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-700.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-700.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v15-latin-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-regular.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-300.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-300.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-500.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-500.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-700.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-700.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\fonts\\roboto-v30-latin-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-regular.woff"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\DHL.svg",
+      "PackagePath": "staticwebassets\\images\\DHL.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\accenture.svg",
+      "PackagePath": "staticwebassets\\images\\accenture.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\allianz.svg",
+      "PackagePath": "staticwebassets\\images\\allianz.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\background.svg",
+      "PackagePath": "staticwebassets\\images\\background.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\checkmark.svg",
+      "PackagePath": "staticwebassets\\images\\checkmark.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\community.svg",
+      "PackagePath": "staticwebassets\\images\\community.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\dell.svg",
+      "PackagePath": "staticwebassets\\images\\dell.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\deloitte.svg",
+      "PackagePath": "staticwebassets\\images\\deloitte.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\easier-than-you-think.svg",
+      "PackagePath": "staticwebassets\\images\\easier-than-you-think.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\eurobank.svg",
+      "PackagePath": "staticwebassets\\images\\eurobank.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\hero.png",
+      "PackagePath": "staticwebassets\\images\\hero.png"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\import.svg",
+      "PackagePath": "staticwebassets\\images\\import.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\include-radzen.svg",
+      "PackagePath": "staticwebassets\\images\\include-radzen.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\install.svg",
+      "PackagePath": "staticwebassets\\images\\install.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\konica-minolta.svg",
+      "PackagePath": "staticwebassets\\images\\konica-minolta.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\microsoft.svg",
+      "PackagePath": "staticwebassets\\images\\microsoft.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\nasa.svg",
+      "PackagePath": "staticwebassets\\images\\nasa.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\nokia.svg",
+      "PackagePath": "staticwebassets\\images\\nokia.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\nuget-explorer.png",
+      "PackagePath": "staticwebassets\\images\\nuget-explorer.png"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\play.svg",
+      "PackagePath": "staticwebassets\\images\\play.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\porsche.svg",
+      "PackagePath": "staticwebassets\\images\\porsche.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\premium.svg",
+      "PackagePath": "staticwebassets\\images\\premium.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\radzen-blazor-components.png",
+      "PackagePath": "staticwebassets\\images\\radzen-blazor-components.png"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\radzen-blazor-studio-dark.png",
+      "PackagePath": "staticwebassets\\images\\radzen-blazor-studio-dark.png"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\radzen-nuget.png",
+      "PackagePath": "staticwebassets\\images\\radzen-nuget.png"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\radzen.mp4",
+      "PackagePath": "staticwebassets\\images\\radzen.mp4"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\siemens.svg",
+      "PackagePath": "staticwebassets\\images\\siemens.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\success.svg",
+      "PackagePath": "staticwebassets\\images\\success.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\theme.svg",
+      "PackagePath": "staticwebassets\\images\\theme.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\images\\use-component.svg",
+      "PackagePath": "staticwebassets\\images\\use-component.svg"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\js\\blazor.server.js",
+      "PackagePath": "staticwebassets\\js\\blazor.server.js"
+    },
+    {
+      "Id": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.WebUI\\wwwroot\\js\\highlight.pack.js",
+      "PackagePath": "staticwebassets\\js\\highlight.pack.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.AlefahERP.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.AlefahERP.WebUI.props",
+      "PackagePath": "build\\AlefahERP.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.AlefahERP.WebUI.props",
+      "PackagePath": "buildMultiTargeting\\AlefahERP.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.AlefahERP.WebUI.props",
+      "PackagePath": "buildTransitive\\AlefahERP.WebUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

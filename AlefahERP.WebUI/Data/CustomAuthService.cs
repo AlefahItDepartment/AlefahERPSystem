@@ -7,6 +7,9 @@ namespace AlefahERP.WebUI.Data
         public CustomAuthService()
         {
             Users = new Dictionary<string, ClaimsPrincipal>();
+             
+
+
         }
         public Dictionary<string, ClaimsPrincipal> Users { get; set; }
     }

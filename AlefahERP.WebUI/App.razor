@@ -3,12 +3,13 @@
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
             <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                 
                 <NotAuthorized>
                    @* @if (true) { } //Used for breakpoint.*@
                     <Login />
                 </NotAuthorized>
                 <Authorizing>
-                   @* <FocusOnNavigate RouteData="@routeData" Selector="h1" />*@
+                    <FocusOnNavigate RouteData="@routeData" Selector="h1" />
                 </Authorizing>
             </AuthorizeRouteView>
         </Found>

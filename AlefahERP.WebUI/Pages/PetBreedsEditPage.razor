@@ -24,9 +24,9 @@
                 <div class="form-group">
                     <RadzenText>Sub Species <span class="text-danger">*</span></RadzenText>
                     <div class="input-group">
-                        <RadzenDropDown Name="PetSubSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSubSpeciesID TextProperty="PetSubSpeciesNameEN" ValueProperty="PetSubSpeciesID" Data=@petSubSpeciesList class="w-100" />
+                        <RadzenDropDown Name="PetSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSpeciesID TextProperty="PetSpeciesNameEN" ValueProperty="PetSpeciesID" Data=@petSpeciesList class="w-100" />
                     </div>
-                    <RadzenRequiredValidator Component="PetSubSpeciesID" Text="Pet Breeds is required" Popup=@popup Style="position:absolute" />
+                    <RadzenRequiredValidator Component="PetSpeciesID" Text="Pet Breeds is required" Popup=@popup Style="position:absolute" />
                 </div>
                 <div class="form-group mb-1">
                     <RadzenText>Name (English)</RadzenText>
@@ -71,7 +71,6 @@
     bool showErrorMessage;
     string message;
     List<PetSpecies> petSpeciesList = new List<PetSpecies>();
-    List<PetSubSpecies> petSubSpeciesList = new List<PetSubSpecies>();
 
 
     [Parameter]
@@ -86,15 +85,15 @@
         var results = await this.unitofWork.PetCare.PetBreeds.Get(PetBreedID);
         if (results.status)
             model = results.data;
-        await GetPetSubSpecies();
+        await GetPetSpecies();
     }
 
 
-    async Task GetPetSubSpecies()
+    async Task GetPetSpecies()
     {
 
 
-        petSubSpeciesList = this.unitofWork.PetCare.PetSubSpecies.GetAll().ToList();
+        petSpeciesList = this.unitofWork.PetCare.PetSpecies.GetAll().ToList();
     }
 
     async Task OnUpdate()
