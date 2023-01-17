@@ -10,8 +10,9 @@ namespace AlefahERP.DTO
     {
         public int ReligionID { get; set; }
         public string ReligionNameEN { get; set; }
-        public string ReligionNameAR { get;set; }
+        public string ReligionNameAR { get; set; }
         public int SortOrder { get; set; }
         public bool IsActive { get; set; }
 
     }
+}
