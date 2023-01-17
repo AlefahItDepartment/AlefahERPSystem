@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Repository\\AlefahERP.Repository.csproj": {}
+    "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Repository\\AlefahERP.Repository.csproj": {}
   },
   "projects": {
-    "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Common\\AlefahERP.Common.csproj": {
+    "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Common\\AlefahERP.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Common\\AlefahERP.Common.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Common\\AlefahERP.Common.csproj",
         "projectName": "AlefahERP.Common",
-        "projectPath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Common\\AlefahERP.Common.csproj",
-        "packagesPath": "C:\\Users\\Imran\\.nuget\\packages\\",
-        "outputPath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Common\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Common\\AlefahERP.Common.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Imran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,13 +22,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.DTO\\AlefahERP.DTO.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.DTO\\AlefahERP.DTO.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -64,21 +63,17 @@
         }
       }
     },
-    "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.DTO\\AlefahERP.DTO.csproj": {
+    "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.DTO\\AlefahERP.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.DTO\\AlefahERP.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.DTO\\AlefahERP.DTO.csproj",
         "projectName": "AlefahERP.DTO",
-        "projectPath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.DTO\\AlefahERP.DTO.csproj",
-        "packagesPath": "C:\\Users\\Imran\\.nuget\\packages\\",
-        "outputPath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.DTO\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.DTO\\AlefahERP.DTO.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.DTO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Imran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +81,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -134,21 +128,17 @@
         }
       }
     },
-    "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Repository\\AlefahERP.Repository.csproj": {
+    "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Repository\\AlefahERP.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Repository\\AlefahERP.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Repository\\AlefahERP.Repository.csproj",
         "projectName": "AlefahERP.Repository",
-        "projectPath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Repository\\AlefahERP.Repository.csproj",
-        "packagesPath": "C:\\Users\\Imran\\.nuget\\packages\\",
-        "outputPath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Repository\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Repository\\AlefahERP.Repository.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Repository\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Imran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,18 +146,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Common\\AlefahERP.Common.csproj": {
-                "projectPath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.Common\\AlefahERP.Common.csproj"
+              "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Common\\AlefahERP.Common.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.Common\\AlefahERP.Common.csproj"
               },
-              "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.DTO\\AlefahERP.DTO.csproj": {
-                "projectPath": "D:\\ALEFAHERP_GIT\\AlefahERP\\AlefahERP.DTO\\AlefahERP.DTO.csproj"
+              "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.DTO\\AlefahERP.DTO.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\AlefahErp\\AlefahERPSystem\\AlefahERP.DTO\\AlefahERP.DTO.csproj"
               }
             }
           }

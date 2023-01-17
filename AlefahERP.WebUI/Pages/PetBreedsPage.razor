@@ -5,7 +5,7 @@
 @inject IUnitOfWork unitofWork
 @inject DialogService DialogService
 @implements IDisposable
-@attribute [Authorize(Roles = "Admin, Customer")]
+@attribute [Authorize(Roles = "SuperAdministrator, Admin")]
 
 <div class="container-fluid">
 
@@ -43,9 +43,9 @@
                         <div class="form-group">
                             <RadzenText>Sub Species <span class="text-danger">*</span></RadzenText>
                             <div class="input-group">
-                                <RadzenDropDown Name="PetSubSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSubSpeciesID TextProperty="PetSubSpeciesNameEN" ValueProperty="PetSubSpeciesID" Data=@petSubSpeciesList class="w-100" />
+                                <RadzenDropDown Name="PetSpeciesID" AllowClear="true" AllowFiltering="true" @bind-Value=@model.PetSpeciesID TextProperty="PetSpeciesNameEN" ValueProperty="PetSpeciesID" Data=@petSpeciesList class="w-100" />
                             </div>
-                            <RadzenRequiredValidator Component="PetSubSpeciesID" Text="Pet sub species is required" Popup=@popup Style="position:absolute" />
+                            <RadzenRequiredValidator Component="PetSpeciesID" Text="Pet species is required" Popup=@popup Style="position:absolute" />
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -119,7 +119,7 @@
 
     bool checkBox1Value = true;
     PetBreeds model = new PetBreeds();
-    List<PetSubSpecies> petSubSpeciesList = new List<PetSubSpecies>();
+    List<PetSpecies> petSpeciesList = new List<PetSpecies>();
     List<PetBreeds> PetBreeds = new List<PetBreeds>();
 
     RadzenDataGrid<PetBreeds>? grid;
@@ -138,7 +138,7 @@
         DialogService.OnClose += Close;
 
         await PreGridLoadData();
-        await GetPetSubSpecies();
+        await GetPetSpecies();
     }
     public void Dispose()
     {
@@ -324,11 +324,11 @@
 
 
 
-    async Task GetPetSubSpecies()
+    async Task GetPetSpecies()
     {
 
 
-        petSubSpeciesList = this.unitofWork.PetCare.PetSubSpecies.GetAll().ToList();
+        petSpeciesList = this.unitofWork.PetCare.PetSpecies.GetAll().ToList();
     }
 
 

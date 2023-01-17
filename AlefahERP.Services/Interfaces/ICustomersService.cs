@@ -1,7 +1,7 @@
 ﻿using AlefahERP.Common;
 using AlefahERP.DTO;
-using AlefahERP.Services.RequestModels;
-using AlefahERP.Services.ResponseModels;
+using AlefahERP.Common.RequestModels;
+using AlefahERP.Common.ResponseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

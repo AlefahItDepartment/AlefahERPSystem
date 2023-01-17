@@ -7,6 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Implements\PetBloodChemistryDetailsService.cs" />
+    <Compile Remove="Implements\PetBloodChemistryTypesService.cs" />
+    <Compile Remove="Implements\PetBloodScreenDetailsService.cs" />
+    <Compile Remove="Implements\PetBloodScreenTypesService.cs" />
+    <Compile Remove="Implements\PetExamineDetailsService.cs" />
+    <Compile Remove="Implements\PetExamineTypesService.cs" />
+    <Compile Remove="Implements\PetOriginsService.cs" />
+    <Compile Remove="Implements\PetSubSpeciesService.cs" />
+    <Compile Remove="Interfaces\IPetBloodChemistryDetailsService.cs" />
+    <Compile Remove="Interfaces\IPetBloodChemistryTypesService.cs" />
+    <Compile Remove="Interfaces\IPetBloodScreenDetailsService.cs" />
+    <Compile Remove="Interfaces\IPetBloodScreenTypesService.cs" />
+    <Compile Remove="Interfaces\IPetExamineDetailsService.cs" />
+    <Compile Remove="Interfaces\IPetExamineTypesService.cs" />
+    <Compile Remove="Interfaces\IPetOriginsService.cs" />
+    <Compile Remove="Interfaces\IPetSubSpeciesService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 

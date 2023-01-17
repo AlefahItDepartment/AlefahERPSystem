@@ -42,7 +42,7 @@ namespace AlefahERP.WebUI.Pages
                 ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                auth.Users.Add(user.Mobile, claimsPrincipal);
+                auth.Users.Add("Users--x", claimsPrincipal);
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
 

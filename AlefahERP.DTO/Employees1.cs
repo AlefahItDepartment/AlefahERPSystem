@@ -24,7 +24,9 @@ namespace AlefahERP.DTO
         public string NationalID { get; set; }
         public DateTime NationalIDExpiry { get; set; }
         public string? PassportID { get; set; }
-        public DateTime? PassportExpiry { get; set; }
+        public string? IBAN { get; set; }
+        public string? AccountNumber { get; set; }
+        public string? BankName { get; set; }
         public string Mobile { get; set; }
         public string? Email { get; set; }
         public int? QualificationID { get; set; }

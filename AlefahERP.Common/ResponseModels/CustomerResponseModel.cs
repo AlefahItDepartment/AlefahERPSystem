@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlefahERP.Services.ResponseModels
+namespace AlefahERP.Common.ResponseModels
 {
     public class CustomerResponseModel
     {

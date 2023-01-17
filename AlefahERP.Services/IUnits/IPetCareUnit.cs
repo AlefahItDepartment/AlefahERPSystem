@@ -9,18 +9,18 @@ namespace AlefahERP.Services.IUnits
 {
     public interface IPetCareUnit
     {
-        IPetBloodChemistryDetailsService PetBloodChemistryDetails { get; }
-        IPetBloodChemistryTypesService PetBloodChemistryTypes { get; }
-        IPetBloodScreenDetailsService PetBloodScreenDetails { get; }
-        IPetBloodScreenTypesService PetBloodScreenTypes { get; }
+        //IPetBloodChemistryDetailsService PetBloodChemistryDetails { get; }
+        //IPetBloodChemistryTypesService PetBloodChemistryTypes { get; }
+        //IPetBloodScreenDetailsService PetBloodScreenDetails { get; }
+        //IPetBloodScreenTypesService PetBloodScreenTypes { get; }
         IPetBreedsService PetBreeds { get; }
         IPetColorsService PetColors { get; }
-        IPetExamineDetailsService PetExamineDetails { get; }
-        IPetExamineTypesService PetExamineTypes { get; }
-        IPetOriginsService PetOrigins { get; }
+        //IPetExamineDetailsService PetExamineDetails { get; }
+        //IPetExamineTypesService PetExamineTypes { get; }
+        //IPetOriginsService PetOrigins { get; }
         IPetSizesService PetSizes { get; }
         IPetSpeciesService PetSpecies { get; }
-        IPetSubSpeciesService PetSubSpecies { get; }
+        //IPetSpeciesService PetSpecies { get; }
 
     }
 }

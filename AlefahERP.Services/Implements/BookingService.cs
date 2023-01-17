@@ -3,7 +3,7 @@ using AlefahERP.DTO;
 using AlefahERP.Repository;
 using AlefahERP.Repository.Interfaces;
 using AlefahERP.Services.Interfaces;
-using AlefahERP.Services.RequestModels;
+using AlefahERP.Common.RequestModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
